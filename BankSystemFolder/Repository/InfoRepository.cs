@@ -28,22 +28,14 @@ public class InfoRepository
                     };
                     newList.Add(i);
                 }
+            foreach(var i in newList){
+            Console.WriteLine(i);
+            }
             results.Close();
-            return newList;
+            return null;
             }
           
-        public List<InfoModel> ReturnNamesFake(){
-        List<InfoModel> newList = new List<InfoModel>();
-        InfoModel infoclass = new InfoModel(){
-            ID = 12356,
-            Name = "Bob",
-            DateOfBirth = "10/3/1999",
-            Address = "123 Somewhere downtown"
 
-        }; 
-        newList.Add(infoclass);
-        return newList;
-        }
 }
         /*
         public List<InfoModel> info {get;set;}

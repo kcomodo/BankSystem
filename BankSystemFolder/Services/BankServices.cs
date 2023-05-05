@@ -9,9 +9,5 @@ namespace MyProjects.Services{
             List<InfoModel> infoNames = _repo.ReturnName().ToList<InfoModel>();
             return infoNames;
         }
-        public List<InfoModel> returnFake(){
-            List<InfoModel> returnFakeInfo = _repo.ReturnNamesFake().ToList<InfoModel>();
-            return returnFakeInfo;
-        }
     }
 }
