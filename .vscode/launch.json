@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/BankSystem/bin/Debug/net7.0/MyProjects.dll",
+            "program": "${workspaceFolder}/BankSystemFolder/bin/Debug/net7.0/MyProjects.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/BankSystem",
+            "cwd": "${workspaceFolder}/BankSystemFolder",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
