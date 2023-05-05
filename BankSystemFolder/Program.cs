@@ -10,7 +10,7 @@ class Program
         BankServices bank = new BankServices();
         
         /*
-        NOTE: Branch out when creating a method for the user story
+        NOTE: Branch out when creating a service function for the user story
         User stories are in the bankservices.cs
         TODO:
         Create login for username and password, and other info.
@@ -23,7 +23,7 @@ class Program
         Unit test user story that have been created.
         .NET Webservice to modify and add data, rather than manually changing from sql
         Banking website
-
+        
         */
 
         

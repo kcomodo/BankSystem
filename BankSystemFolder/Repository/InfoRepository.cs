@@ -18,7 +18,7 @@ public class InfoRepository
         }
 
         public IEnumerable<InfoModel> ReturnName(){
-            var statement = "Select * from bank_client";
+            var statement = "Select clientFirstName from bank_client";
             var command = new MySqlCommand(statement, _connection);
             var results = command.ExecuteReader();
             List<InfoModel> newList = new List<InfoModel>();
