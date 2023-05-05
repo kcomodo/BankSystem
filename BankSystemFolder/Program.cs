@@ -25,6 +25,8 @@ class Program
         Banking website
 
         */
+
+        
         IEnumerable<InfoModel> list = bank.ReturnInfoName();
         foreach(InfoModel info in list){
                 Console.WriteLine(info.ToString());
