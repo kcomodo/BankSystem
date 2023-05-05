@@ -5,7 +5,8 @@ using MyProjects.Models;
 namespace MyProjects.Repository{
 public class InfoRepository
 {       
-        
+
+        public List<InfoModel> InfoModels{get;set;}
         private MySqlConnection _connection;
         public InfoRepository(){
             string connectionString = "server=istwebclass.org;userid=anewbaue_CatExposure;password=Megumin56;database=anewbaue_Bank";
@@ -28,16 +29,17 @@ public class InfoRepository
                     };
                     newList.Add(i);
                 }
-            foreach(var i in newList){
-            Console.WriteLine(i);
-            }
+
             results.Close();
-            return null;
+            return newList;
             }
           
 
 }
-        /*
+      
+        
+    }
+  /*
         public List<InfoModel> info {get;set;}
         InfoModel infoclass = new InfoModel(){
             ID = 12356,
@@ -63,5 +65,3 @@ public class InfoRepository
         */
 
         //Create a list that holds all the bank info from each person
-        
-    }
