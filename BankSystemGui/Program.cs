@@ -1,7 +1,8 @@
 namespace banksystemgui;
 
 static class Program
-{
+{   
+    //use dotnet to run
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
