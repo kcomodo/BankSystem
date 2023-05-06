@@ -1,0 +1,15 @@
+D:\MyProjects\BankSystem\banksystemgui\bin\Debug\net7.0-windows\banksystemgui.exe
+D:\MyProjects\BankSystem\banksystemgui\bin\Debug\net7.0-windows\banksystemgui.deps.json
+D:\MyProjects\BankSystem\banksystemgui\bin\Debug\net7.0-windows\banksystemgui.runtimeconfig.json
+D:\MyProjects\BankSystem\banksystemgui\bin\Debug\net7.0-windows\banksystemgui.dll
+D:\MyProjects\BankSystem\banksystemgui\bin\Debug\net7.0-windows\banksystemgui.pdb
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.csproj.AssemblyReference.cache
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.AssemblyInfoInputs.cache
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.AssemblyInfo.cs
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.csproj.CoreCompileInputs.cache
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.dll
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\refint\banksystemgui.dll
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.pdb
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\banksystemgui.genruntimeconfig.cache
+D:\MyProjects\BankSystem\banksystemgui\obj\Debug\net7.0-windows\ref\banksystemgui.dll
