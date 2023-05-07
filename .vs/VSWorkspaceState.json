@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\BankSystemGui",
-    "\\BankSystemGui\\BankSystemGui"
+    ""
   ],
-  "SelectedNode": "\\BankSystemGui\\BankSystemGui\\Home.cs",
+  "SelectedNode": "\\BankSystemGui.sln",
   "PreviewInSolutionExplorer": false
 }
