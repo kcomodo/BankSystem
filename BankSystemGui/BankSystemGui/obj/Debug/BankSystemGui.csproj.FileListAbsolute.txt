@@ -10,3 +10,5 @@ D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.csp
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.exe
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.pdb
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.Home.resources
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.CreateAccount1.resources
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.CreateAccount2.resources

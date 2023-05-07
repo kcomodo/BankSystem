@@ -27,6 +27,11 @@ namespace BankSystemGui
 
         private void Home_Load(object sender, EventArgs e)
         {
+           lblDisplayName.Text= CreateAccount1.firstName;
+        }
+
+        private void lblHello_Click(object sender, EventArgs e)
+        {
 
         }
     }
