@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateAccount1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount1.Designer.cs">
+      <DependentUpon>CreateAccount1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount2.Designer.cs">
+      <DependentUpon>CreateAccount2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateAccount1.resx">
+      <DependentUpon>CreateAccount1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount2.resx">
+      <DependentUpon>CreateAccount2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

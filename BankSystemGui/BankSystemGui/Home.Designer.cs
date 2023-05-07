@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.lblDisplayName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(302, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "passed";
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(305, 209);
+            this.btnLogout.Location = new System.Drawing.Point(12, 294);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 1;
@@ -51,13 +42,23 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // lblDisplayName
+            // 
+            this.lblDisplayName.AutoSize = true;
+            this.lblDisplayName.Location = new System.Drawing.Point(20, 22);
+            this.lblDisplayName.Name = "lblDisplayName";
+            this.lblDisplayName.Size = new System.Drawing.Size(35, 13);
+            this.lblDisplayName.TabIndex = 3;
+            this.lblDisplayName.Text = "Name";
+            this.lblDisplayName.Click += new System.EventHandler(this.lblHello_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblDisplayName);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.label1);
             this.Name = "Home";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
@@ -67,8 +68,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label lblDisplayName;
     }
 }
