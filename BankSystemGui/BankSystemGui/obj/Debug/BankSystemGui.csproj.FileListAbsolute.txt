@@ -1,0 +1,12 @@
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\BankSystemGui.exe.config
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\BankSystemGui.exe
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\BankSystemGui.pdb
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.csproj.AssemblyReference.cache
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.csproj.SuggestedBindingRedirects.cache
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.Login.resources
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.Properties.Resources.resources
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.csproj.GenerateResource.cache
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.csproj.CoreCompileInputs.cache
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.exe
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.pdb
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.Home.resources

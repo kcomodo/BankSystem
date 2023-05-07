@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace BankSystemGui
 {
@@ -15,6 +16,54 @@ namespace BankSystemGui
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            if (username == "testing" && password == "testing")
+            {
+                this.Hide();   
+                Home h = new Home();
+                h.Show();
+                
+           
+
+
+            }
+            else
+            {
+                displayIncorrect.Text = "Incorrect Login";
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                this.Hide();
+                Home h = new Home();
+                h.Show();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
