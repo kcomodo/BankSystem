@@ -2,6 +2,8 @@
 using System;
 using MySql.Data.MySqlClient;
 using MyProjects.Models;
+using System.Xml.Linq;
+
 namespace MyProjects.Repository{
 public class InfoRepository
 {       
@@ -25,14 +27,15 @@ public class InfoRepository
             List<InfoModel> newList = new List<InfoModel>();
             while (results.Read())
             {
-                InfoModel i = new InfoModel
+                if (name.Equals(results[0]))
                 {
-                    if(name == results[0]){
+                    InfoModel i = new InfoModel
+                    {
                         Name = (string)results[0]
-                    }
-                    
-                };
-                newList.Add(i);
+                    };
+                    newList.Add(i);
+                }
+                
             }
 
             results.Close();

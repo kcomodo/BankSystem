@@ -4,9 +4,10 @@ using MyProjects.Services;
 
 namespace MyProjects;
 class Program
-{  
-    
-        static void Main(string[] args){
+{
+    private static string name;
+
+    static void Main(string[] args){
         InfoRepository program = new InfoRepository();
         BankServices bank = new BankServices();
 
@@ -26,25 +27,21 @@ class Program
         Banking website
         
         */
-
-        ShowNames();
-
+        DisplayUserName(name);
+        /*
         IEnumerable<InfoModel> list = bank.ReturnInfoName();
         foreach (InfoModel info in list)
         {
             Console.WriteLine(info.Name);
         }
-
+        */
         }
 
-    public static IEnumerable<InfoModel> ShowNames(string name)
+    public static IEnumerable<InfoModel> DisplayUserName(string name)
     {
         InfoRepository program = new InfoRepository();
         BankServices bank = new BankServices();
         IEnumerable<InfoModel> list = bank.ReturnInfoName(name);
-        foreach (InfoModel info in list)
-        {
-            
-        }
+        return list;
     }
 }

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MyProjects.Models;
+using MyProjects.Services;
 namespace BankSystemGui
 {
     public partial class Profile : Form
     {
+        BankServices bankservices = new BankServices();
+        InfoModel model = new InfoModel();  
         public Profile()
         {
             InitializeComponent();
@@ -25,7 +28,11 @@ namespace BankSystemGui
 
         private void Home_Load(object sender, EventArgs e)
         {
-           
+            Login login = new Login();
+
+
+            String name = 
+            IEnumerable<InfoModel> list = bankservices.ReturnInfoName().ToList();   
         }
 
         private void lblHello_Click(object sender, EventArgs e)
@@ -66,6 +73,11 @@ namespace BankSystemGui
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
