@@ -72,5 +72,10 @@ namespace BankSystemGui
             CreateAccount1 c1 = new CreateAccount1(); 
             c1.Show();
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

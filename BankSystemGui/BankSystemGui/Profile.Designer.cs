@@ -39,7 +39,7 @@
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.middlePanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.middlePanel.SuspendLayout();
             this.SuspendLayout();
@@ -186,22 +186,23 @@
             // 
             // middlePanel
             // 
-            this.middlePanel.Controls.Add(this.label1);
+            this.middlePanel.Controls.Add(this.lblName);
             this.middlePanel.Location = new System.Drawing.Point(139, 84);
             this.middlePanel.Name = "middlePanel";
             this.middlePanel.Size = new System.Drawing.Size(658, 309);
             this.middlePanel.TabIndex = 9;
             this.middlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.middlePanel_Paint);
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(177, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(177, 102);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(70, 25);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "label1";
+            this.lblName.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Profile
             // 
@@ -237,6 +238,6 @@
         private FontAwesome.Sharp.IconButton btnOthers;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btnExit;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblName;
     }
 }
