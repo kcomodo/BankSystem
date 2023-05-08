@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BankSystemGui",
     "\\BankSystemGui\\bin",
     "\\BankSystemGui\\bin\\Debug"
   ],
-  "SelectedNode": "\\BankSystemGui\\Properties",
+  "SelectedNode": "\\BankSystemGui",
   "PreviewInSolutionExplorer": false
 }

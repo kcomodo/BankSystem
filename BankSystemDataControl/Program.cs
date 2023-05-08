@@ -1,7 +1,8 @@
 using MyProjects.Repository;
 using MyProjects.Models;
 using MyProjects.Services;
-namespace MyProject;
+
+namespace MyProjects;
 class Program
 {  
     
@@ -26,6 +27,7 @@ class Program
         
         */
 
+        ShowNames();
 
         IEnumerable<InfoModel> list = bank.ReturnInfoName();
         foreach (InfoModel info in list)
@@ -33,10 +35,16 @@ class Program
             Console.WriteLine(info.Name);
         }
 
+        }
+
+    public static IEnumerable<InfoModel> ShowNames(string name)
+    {
+        InfoRepository program = new InfoRepository();
+        BankServices bank = new BankServices();
+        IEnumerable<InfoModel> list = bank.ReturnInfoName(name);
+        foreach (InfoModel info in list)
+        {
+            
+        }
     }
-
-
-
-
-
 }
