@@ -44,5 +44,25 @@ namespace BankSystemGui
             Login l = new Login();
             l.Show();
         }
+
+        private void middlePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnOthers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bottomPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
