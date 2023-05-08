@@ -1,0 +1,52 @@
+html, body, head {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navBar {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    height: 70%;
+    background-color: grey;
+    padding: 10px;
+    font-size: 28px;
+}
+
+.navBar.inactive {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.dropdown-profile {
+    font-size: 28px;
+}
+.dropdown-container {
+    margin: 0px;
+    display: flex;
+    padding: 5px;
+    height: auto;
+    max-height: calc(100vh - 60px);
+}
+
+.dropdown-menu.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20);
+    transition: var(--speed) ease;
+}
+
+.dropdown-menu.active {
+    position: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+    background-color: lightgray;
+    color:red;
+}
