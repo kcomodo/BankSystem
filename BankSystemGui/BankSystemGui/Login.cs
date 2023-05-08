@@ -65,5 +65,12 @@ namespace BankSystemGui
         {
 
         }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreateAccount1 c1 = new CreateAccount1(); 
+            c1.Show();
+        }
     }
 }

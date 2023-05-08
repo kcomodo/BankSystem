@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtStateCreate = new System.Windows.Forms.TextBox();
+            this.txtCityCreate = new System.Windows.Forms.TextBox();
+            this.txtZipCreate = new System.Windows.Forms.TextBox();
+            this.txtAddressCreate = new System.Windows.Forms.TextBox();
+            this.btnCreateAccount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,58 +75,60 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Address:";
             // 
-            // textBox1
+            // txtStateCreate
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtStateCreate.Location = new System.Drawing.Point(111, 21);
+            this.txtStateCreate.Name = "txtStateCreate";
+            this.txtStateCreate.Size = new System.Drawing.Size(100, 20);
+            this.txtStateCreate.TabIndex = 4;
+            this.txtStateCreate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtCityCreate
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtCityCreate.Location = new System.Drawing.Point(111, 53);
+            this.txtCityCreate.Name = "txtCityCreate";
+            this.txtCityCreate.Size = new System.Drawing.Size(100, 20);
+            this.txtCityCreate.TabIndex = 5;
             // 
-            // textBox3
+            // txtZipCreate
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtZipCreate.Location = new System.Drawing.Point(111, 88);
+            this.txtZipCreate.Name = "txtZipCreate";
+            this.txtZipCreate.Size = new System.Drawing.Size(100, 20);
+            this.txtZipCreate.TabIndex = 6;
             // 
-            // textBox4
+            // txtAddressCreate
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtAddressCreate.Location = new System.Drawing.Point(111, 117);
+            this.txtAddressCreate.Name = "txtAddressCreate";
+            this.txtAddressCreate.Size = new System.Drawing.Size(100, 20);
+            this.txtAddressCreate.TabIndex = 7;
             // 
-            // button1
+            // btnCreateAccount
             // 
-            this.button1.Location = new System.Drawing.Point(214, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 57);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Create Account";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Location = new System.Drawing.Point(214, 235);
+            this.btnCreateAccount.Name = "btnCreateAccount";
+            this.btnCreateAccount.Size = new System.Drawing.Size(163, 57);
+            this.btnCreateAccount.TabIndex = 8;
+            this.btnCreateAccount.Text = "Create Account";
+            this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // CreateAccount2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCreateAccount);
+            this.Controls.Add(this.txtAddressCreate);
+            this.Controls.Add(this.txtZipCreate);
+            this.Controls.Add(this.txtCityCreate);
+            this.Controls.Add(this.txtStateCreate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateAccount2";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -140,10 +142,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtStateCreate;
+        private System.Windows.Forms.TextBox txtCityCreate;
+        private System.Windows.Forms.TextBox txtZipCreate;
+        private System.Windows.Forms.TextBox txtAddressCreate;
+        private System.Windows.Forms.Button btnCreateAccount;
     }
 }

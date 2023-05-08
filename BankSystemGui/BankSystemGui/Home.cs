@@ -19,13 +19,48 @@ namespace BankSystemGui
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login l = new Login();
-            l.Show();
+      
         
         }
 
         private void Home_Load(object sender, EventArgs e)
+        {
+       
+        }
+
+        private void lblHello_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login l = new Login();
+            l.Show();
+        }
+
+        private void middlePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnOthers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bottomPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
         {
 
         }

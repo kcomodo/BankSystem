@@ -34,6 +34,7 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.displayIncorrect = new System.Windows.Forms.Label();
+            this.btnSignup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -58,7 +59,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(277, 262);
+            this.btnLogin.Location = new System.Drawing.Point(134, 262);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(188, 61);
             this.btnLogin.TabIndex = 2;
@@ -93,17 +94,29 @@
             this.displayIncorrect.TabIndex = 5;
             this.displayIncorrect.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnSignup
+            // 
+            this.btnSignup.Location = new System.Drawing.Point(365, 262);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(172, 61);
+            this.btnSignup.TabIndex = 6;
+            this.btnSignup.Text = "Sign up";
+            this.btnSignup.UseVisualStyleBackColor = true;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.displayIncorrect);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -120,6 +133,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label displayIncorrect;
+        private System.Windows.Forms.Button btnSignup;
     }
 }
 
