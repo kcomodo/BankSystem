@@ -8,7 +8,7 @@ class Program
         static void Main(string[] args){
         InfoRepository program = new InfoRepository();
         BankServices bank = new BankServices();
-        
+
         /*
         NOTE: Branch out when creating a service function for the user story
         User stories are in the bankservices.cs
@@ -26,16 +26,17 @@ class Program
         
         */
 
-        
+
         IEnumerable<InfoModel> list = bank.ReturnInfoName();
-        foreach(InfoModel info in list){
-                Console.WriteLine(info.ToString());
+        foreach (InfoModel info in list)
+        {
+            Console.WriteLine(info.Name);
         }
 
-        }
-       
-        
-        
+    }
+
+
+
 
 
 }
