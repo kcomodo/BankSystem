@@ -17,25 +17,27 @@ public class InfoRepository
             _connection.Close();
         }
 
-        public IEnumerable<InfoModel> ReturnName(){
+        public IEnumerable<InfoModel> ReturnName()
+        {
             var statement = "Select clientFirstName from bank_client";
             var command = new MySqlCommand(statement, _connection);
             var results = command.ExecuteReader();
             List<InfoModel> newList = new List<InfoModel>();
-                while(results.Read()){
-                    InfoModel i = new InfoModel{
-                        ID = (int)results[0],
-                        Name = (string)results[1]
-                    };
-                    newList.Add(i);
-                }
+            while (results.Read())
+            {
+                InfoModel i = new InfoModel
+                {
+                    Name = (string)results[0]
+                };
+                newList.Add(i);
+            }
 
             results.Close();
             return newList;
-            }
-          
+        }
 
-}
+
+    }
       
         
     }
