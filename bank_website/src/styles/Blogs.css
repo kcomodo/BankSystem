@@ -1,0 +1,108 @@
+.center {
+    display: absolute;
+}
+
+.box1.inactive {
+  display: block;  
+  width: 0px;
+  height: 600px;
+  overflow: hidden;
+  background-color: grey;
+  transition: width 300ms;
+  border: 3px solid black;
+  transition: border-width 300ms;
+  border-bottom-right-radius: 10px;
+  float: left;
+}
+
+.box1.active {
+    display: block;  
+    width: 350px;
+    --navBarWidth: width;
+    overflow: hidden;
+    height: 600px;
+    background-color: grey;
+    transition: width 300ms;
+    float: left;
+    border: 3px solid black;
+    border-bottom-right-radius: 10px;
+  }
+
+.box2 {
+    display: block;  
+    width: 5%;
+  height: 5%;
+  background-color: grey;
+  float: left;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black ;
+  border-right: 2px solid black ;
+  transition: 300ms;
+  }
+
+.box2:hover {
+    width: 5.5%;
+  height: 5.5%;
+  transition: 300ms;
+}
+
+  .link-styles, .dropdown-profile {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+    padding-right: 30px;
+    padding-left: 20px;
+    width: var(--navBarWidth);
+    border-bottom: 1px solid black;
+    font-size: 32px;
+    transition: 300ms;
+}
+
+.link-styles:hover, .dropdown-profile:hover {
+    background-color: rgb(161, 161, 161);
+    transition: 300ms;
+} 
+
+.dropdownItem {
+    margin-top: 5px;
+    width: 100%;
+}
+.dropdown-profile {
+    cursor: pointer;
+    overflow: hidden;
+    height: 30px;
+    padding-bottom: 15px;
+}
+
+.dropDownIcon {
+    display: block;
+    float: right;
+    height: 30px;
+    width: 20%;
+    z-index: 3;
+}
+
+.dropdown-menu.active {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    visibility: visible;
+    overflow: hidden;
+    background-color: grey;
+    transition-duration: 300ms;
+    transition-property: all;
+}
+
+.dropdown-menu.inactive {
+    position: block;
+    display: flex;
+    visibility: hidden;
+    overflow: hidden;
+  background-color: grey;
+  height: 0%;
+    width: 0%;
+  transition-duration: 300ms;
+  transition-property: all;
+}

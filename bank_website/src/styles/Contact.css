@@ -1,0 +1,40 @@
+html, body, head, div {
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.testing {
+    position: absolute;
+  }
+
+.navBar {
+    display: block;
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    background-color: grey;
+    float: left;
+}
+
+.navBar.active {
+    display: block;
+    visibility: visible;
+    height: auto;
+    width: 100%;
+    background-color: grey;
+    transition: 300ms;
+    float: left;
+}
+
+.menuIcon {
+    display: block;
+    width: 20%;
+    height: 20%;
+    float: left;
+}
