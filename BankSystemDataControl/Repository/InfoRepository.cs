@@ -41,11 +41,9 @@ public class InfoRepository
                     ZipCode = (int)results[7],
                     Address = (string)results[8],
                     PhoneNumber = (string)results[9],
-                    DateOfBirth = DateTime.ParseExact(results.GetString(10), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)
-
-                    /*
+                    DateOfBirth = DateTime.ParseExact(results.GetString(10), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture),
                     Password = (string)results[11]
-                    */
+                    
                 };
                 
 
