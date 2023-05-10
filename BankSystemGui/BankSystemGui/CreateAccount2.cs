@@ -16,7 +16,7 @@ namespace BankSystemGui
         {
             InitializeComponent();
         }
-        Home h = new Home();
+          
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -25,6 +25,7 @@ namespace BankSystemGui
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Home h = new Home();
             h.Show();
         }
     }

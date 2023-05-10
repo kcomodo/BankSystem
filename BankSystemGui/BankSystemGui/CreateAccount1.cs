@@ -18,8 +18,7 @@ namespace BankSystemGui
         public static string userName;
         public static string password;
         public static char phonenumber;
-
-        CreateAccount2 c2 = new CreateAccount2();
+        
 
         public CreateAccount1()
         {
@@ -33,12 +32,19 @@ namespace BankSystemGui
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             firstName = txtFirstNameCreate.Text;
             lastName = txtLastNameCreate.Text;
             userName = txtUserCreate.Text;
             password = txtPassCreate.Text;
+            CreateAccount2 c2 = new CreateAccount2();
             c2.Show();
+
+        }
+
+        private void txtFirstNameCreate_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

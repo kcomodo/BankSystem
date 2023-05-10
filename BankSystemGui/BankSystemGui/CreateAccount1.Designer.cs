@@ -98,6 +98,7 @@
             this.txtFirstNameCreate.Name = "txtFirstNameCreate";
             this.txtFirstNameCreate.Size = new System.Drawing.Size(100, 20);
             this.txtFirstNameCreate.TabIndex = 12;
+            this.txtFirstNameCreate.TextChanged += new System.EventHandler(this.txtFirstNameCreate_TextChanged);
             // 
             // txtLastNameCreate
             // 

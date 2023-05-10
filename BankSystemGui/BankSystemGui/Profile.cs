@@ -33,7 +33,7 @@ namespace BankSystemGui
 
             string name = Login.username;
             string password = Login.password;
-            lblName.Text = bank.ReturnInfoName(name);
+           
 
 
 

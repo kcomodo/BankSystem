@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using MyProjects.Services;
+using MyProjects.Repository;
 
 namespace BankSystemGui
 {
@@ -15,6 +17,7 @@ namespace BankSystemGui
     {
         public static string username;
         public static string password;
+
         public Login()
         {
             InitializeComponent();
@@ -24,15 +27,13 @@ namespace BankSystemGui
         {
             username = txtUsername.Text;
             password = txtPassword.Text;
-            if (username == "SAMPLE" && password == "SAMPLEPASSWORD")
+            
+          
+            if(username == "SAMPLE1" && password == "SAMPLEPASSWORD")
             {
-                this.Hide();   
+                this.Hide();
                 Home h = new Home();
                 h.Show();
-                
-           
-
-
             }
             else
             {
@@ -40,6 +41,7 @@ namespace BankSystemGui
                 txtUsername.Text = "";
                 txtPassword.Text = "";
             }
+            
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -54,12 +56,14 @@ namespace BankSystemGui
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
+            /*
             if(e.KeyChar == (char)Keys.Enter)
             {
                 this.Hide();
                 Home h = new Home();
                 h.Show();
             }
+            */
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace BankSystemGui
         {
             string name = Login.username;
             string password = Login.password;
-            labelName.Text = bank.ReturnInfoName(name);
+            
         }
 
         private void lblHello_Click(object sender, EventArgs e)
