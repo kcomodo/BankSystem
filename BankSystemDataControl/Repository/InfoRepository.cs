@@ -53,25 +53,48 @@ public class InfoRepository
             results.Close();
             return newList;
         }
-
-        public string ReturnUserName(string name)
+        public IEnumerable<InfoModel> ReturnLogin()
         {
-            string n;
-            var statement = "Select clientUserName from bank_client";
+            var statement = "Select clientUserName, clientPassword from bank_client";
+            var command = new MySqlCommand(statement, _connection);
+            var results = command.ExecuteReader();
+            List<InfoModel> newList = new List<InfoModel>();
+
+            while (results.Read())
+            {
+
+                InfoModel i = new InfoModel()
+                {
+                    UserName = (string)results[0],
+                    Password = (string)results[1]
+
+                };
+
+
+                newList.Add(i);
+
+            }
+            results.Close();
+            return newList;
+        }
+
+        public bool ValidateLogin(string username, string password)
+        {
+            var statement = "Select clientUserName, clientPassword from bank_client";
             var command = new MySqlCommand(statement, _connection);
             var results = command.ExecuteReader();
            
             while (results.Read())
             {
-                if (name.Equals(results[0]))
+                if (username.Equals(results[0]) && password.Equals(results[1]))
                 {
-                    return "valid";
+                    return true;
                 }
                 
             }
 
             results.Close();
-            return "this isn't right";
+            return false;
         }
 
 

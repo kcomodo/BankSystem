@@ -28,10 +28,17 @@ class Program
         
         */
         //DisplayUserName(name);
-        string testing = DisplayUserName("SAMPLE1");
-        Console.WriteLine(testing);
-        List<InfoModel> somethingList = ReturnAll();
-        foreach(var i in somethingList)
+        bool validation = ValidateLogin("SAMPLE1","SAMPLEPASSWORD");
+        Console.WriteLine(validation);
+        Console.WriteLine("-----------------------------------------");
+        List<InfoModel> userpassValidation = ReturnLogin();
+        foreach(var i in userpassValidation)
+        {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("-----------------------------------------");
+        List<InfoModel> LoginList = ReturnAll();
+        foreach(var i in LoginList)
         {
             Console.WriteLine(i);
         }
@@ -45,18 +52,23 @@ class Program
         */
         }
     public static List<InfoModel> ReturnAll() {
-        InfoRepository program = new InfoRepository();
         BankServices bank = new BankServices();
-        InfoRepository repository = new InfoRepository();
         List<InfoModel> list = bank.ReturnAll();
         return list;
 
     }
-    public static string DisplayUserName(string name)
+    public static List<InfoModel> ReturnLogin()
+    {
+        BankServices bank = new BankServices();
+        List<InfoModel> list = bank.ReturnLogin();
+        return list;
+
+    }
+    public static bool ValidateLogin(string username,string password)
     {
         InfoRepository program = new InfoRepository();
         BankServices bank = new BankServices();
-        string newName = bank.ReturnUserName(name);
-        return newName;
+        bool validation = bank.ValidateLogin(username,password);
+        return validation;
     }
 }

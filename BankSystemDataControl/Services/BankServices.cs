@@ -25,8 +25,13 @@ namespace MyProjects.Services{
             List<InfoModel> newList = _repo.ReturnAll().ToList<InfoModel>();
             return newList;
         }
-        public string ReturnUserName(string name){
-            string infoNames = _repo.ReturnUserName(name);
+        public List<InfoModel> ReturnLogin()
+        {
+            List<InfoModel> newList = _repo.ReturnLogin().ToList<InfoModel>();
+            return newList;
+        }
+        public bool ValidateLogin(string username, string password){
+            bool infoNames = _repo.ValidateLogin(username,password);
             return infoNames;
         }
         
