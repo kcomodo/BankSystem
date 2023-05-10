@@ -19,8 +19,9 @@ public class InfoRepository
             _connection.Close();
         }
 
-        public IEnumerable<InfoModel> ReturnName(string name)
+        public string ReturnName(string name)
         {
+            string n;
             var statement = "Select clientFirstName from bank_client";
             var command = new MySqlCommand(statement, _connection);
             var results = command.ExecuteReader();
@@ -29,17 +30,13 @@ public class InfoRepository
             {
                 if (name.Equals(results[0]))
                 {
-                    InfoModel i = new InfoModel
-                    {
-                        Name = (string)results[0]
-                    };
-                    newList.Add(i);
+                    return n = (string)results[0];
                 }
                 
             }
 
             results.Close();
-            return newList;
+            return null;
         }
 
 

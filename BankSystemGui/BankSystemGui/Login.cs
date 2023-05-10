@@ -13,6 +13,8 @@ namespace BankSystemGui
 {
     public partial class Login : Form
     {
+        public static string username;
+        public static string password;
         public Login()
         {
             InitializeComponent();
@@ -20,9 +22,8 @@ namespace BankSystemGui
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
+            username = txtUsername.Text;
+            password = txtPassword.Text;
             if (username == "testing" && password == "testing")
             {
                 this.Hide();   

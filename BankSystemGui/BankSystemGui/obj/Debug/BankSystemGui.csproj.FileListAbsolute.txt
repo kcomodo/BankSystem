@@ -14,3 +14,5 @@ D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.Cre
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.CreateAccount2.resources
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\FontAwesome.Sharp.dll
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.csproj.CopyComplete
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.exe.config
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.Profile.resources
