@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyProjects.Models;
 using MyProjects.Services;
+using MyProjects;
 namespace BankSystemGui
 {
     public partial class Profile : Form
     {
-        BankServices bankservices = new BankServices();
-        InfoModel model = new InfoModel();  
+        BankServices bank = new BankServices();
+        InfoModel model = new InfoModel();
+       
         public Profile()
         {
             InitializeComponent();
@@ -28,11 +30,13 @@ namespace BankSystemGui
 
         private void Home_Load(object sender, EventArgs e)
         {
-            Login login = new Login();
+
+            string name = Login.username;
+            string password = Login.password;
+            lblName.Text = bank.ReturnInfoName(name);
 
 
-            String name = 
-            IEnumerable<InfoModel> list = bankservices.ReturnInfoName().ToList();   
+
         }
 
         private void lblHello_Click(object sender, EventArgs e)

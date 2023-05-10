@@ -5,7 +5,7 @@ using MyProjects.Services;
 namespace MyProjects;
 class Program
 {
-    private static string name;
+    public  static string name;
 
     static void Main(string[] args){
         InfoRepository program = new InfoRepository();
@@ -37,11 +37,11 @@ class Program
         */
         }
 
-    public static IEnumerable<InfoModel> DisplayUserName(string name)
+    public static string DisplayUserName(string name)
     {
         InfoRepository program = new InfoRepository();
         BankServices bank = new BankServices();
-        IEnumerable<InfoModel> list = bank.ReturnInfoName(name);
-        return list;
+        string newName = bank.ReturnInfoName(name);
+        return newName;
     }
 }
