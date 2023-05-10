@@ -5,15 +5,19 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
+var dotenv = require('dotenv');
+dotenv.config();
+
+var databaseHost = process.env.DATABASE_HOST;
+
 app.use(bodyParser.json());
 const mysql = require('mysql2');
 
 const con = mysql.createConnection({
-    host: "istwebclass.org",
-    user: "anewbaue_CatExposure",
-    password: "Megumin56",
-    database: "anewbaue_Bank"
-
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME
 });
 
 app.set('port', (process.env.PORT || 3000));
