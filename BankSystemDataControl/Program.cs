@@ -27,7 +27,15 @@ class Program
         Banking website
         
         */
-        DisplayUserName(name);
+        //DisplayUserName(name);
+        string testing = DisplayUserName("SAMPLE");
+        Console.WriteLine(testing);
+        List<InfoModel> somethingList = ReturnAll();
+        foreach(var i in somethingList)
+        {
+            Console.WriteLine(i);
+        }
+        
         /*
         IEnumerable<InfoModel> list = bank.ReturnInfoName();
         foreach (InfoModel info in list)
@@ -36,12 +44,19 @@ class Program
         }
         */
         }
+    public static List<InfoModel> ReturnAll() {
+        InfoRepository program = new InfoRepository();
+        BankServices bank = new BankServices();
+        InfoRepository repository = new InfoRepository();
+        List<InfoModel> list = bank.ReturnAll();
+        return list;
 
+    }
     public static string DisplayUserName(string name)
     {
         InfoRepository program = new InfoRepository();
         BankServices bank = new BankServices();
-        string newName = bank.ReturnInfoName(name);
+        string newName = bank.ReturnUserName(name);
         return newName;
     }
 }

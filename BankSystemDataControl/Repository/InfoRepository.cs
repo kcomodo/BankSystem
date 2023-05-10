@@ -3,6 +3,7 @@ using System;
 using MySql.Data.MySqlClient;
 using MyProjects.Models;
 using System.Xml.Linq;
+using System.Globalization;
 
 namespace MyProjects.Repository{
 public class InfoRepository
@@ -18,14 +19,50 @@ public class InfoRepository
         ~InfoRepository(){
             _connection.Close();
         }
-
-        public string ReturnName(string name)
+        public IEnumerable<InfoModel> ReturnAll()
         {
-            string n;
-            var statement = "Select clientFirstName from bank_client";
+            var statement = "Select * from bank_client";
             var command = new MySqlCommand(statement, _connection);
             var results = command.ExecuteReader();
             List<InfoModel> newList = new List<InfoModel>();
+
+            while (results.Read())
+            {
+                
+                InfoModel i = new InfoModel()
+                {
+                    ID = (int)results[0],
+                    FirstName = (string)results[1],
+                    LastName = (string)results[2],
+                    UserName = (string)results[3],
+                    Email = (string)results[4],
+                    State = (string)results[5],
+                    City = (string)results[6],
+                    ZipCode = (int)results[7],
+                    Address = (string)results[8],
+                    PhoneNumber = (string)results[9],
+                    DateOfBirth = DateTime.ParseExact(results.GetString(10), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)
+
+                    /*
+                    Password = (string)results[11]
+                    */
+                };
+                
+
+                newList.Add(i);
+
+            }
+            results.Close();
+            return newList;
+        }
+
+        public string ReturnUserName(string name)
+        {
+            string n;
+            var statement = "Select clientUserName from bank_client";
+            var command = new MySqlCommand(statement, _connection);
+            var results = command.ExecuteReader();
+           
             while (results.Read())
             {
                 if (name.Equals(results[0]))
@@ -36,7 +73,7 @@ public class InfoRepository
             }
 
             results.Close();
-            return null;
+            return "this isn't right";
         }
 
 

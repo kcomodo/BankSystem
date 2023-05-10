@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyProjects.Models;
+using MyProjects.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +13,8 @@ namespace BankSystemGui
 {
     public partial class Home : Form
     {
+        BankServices bank = new BankServices();
+        InfoModel model = new InfoModel();
         public Home()
         {
             InitializeComponent();
@@ -24,7 +28,9 @@ namespace BankSystemGui
 
         private void Home_Load(object sender, EventArgs e)
         {
-       
+            string name = Login.username;
+            string password = Login.password;
+            labelName.Text = bank.ReturnInfoName(name);
         }
 
         private void lblHello_Click(object sender, EventArgs e)
@@ -37,12 +43,7 @@ namespace BankSystemGui
 
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login l = new Login();
-            l.Show();
-        }
+        
 
         private void middlePanel_Paint(object sender, PaintEventArgs e)
         {
@@ -62,6 +63,12 @@ namespace BankSystemGui
         private void btnSettings_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.Show();
         }
     }
 }

@@ -41,7 +41,7 @@
             this.middlePanel = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
-            this.middlePanel.SuspendLayout();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtPicker
@@ -177,6 +177,7 @@
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.lblName);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(139, 0);
             this.topPanel.Name = "topPanel";
@@ -186,7 +187,6 @@
             // 
             // middlePanel
             // 
-            this.middlePanel.Controls.Add(this.lblName);
             this.middlePanel.Location = new System.Drawing.Point(139, 84);
             this.middlePanel.Name = "middlePanel";
             this.middlePanel.Size = new System.Drawing.Size(658, 309);
@@ -197,7 +197,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(177, 102);
+            this.lblName.Location = new System.Drawing.Point(129, 39);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(70, 25);
             this.lblName.TabIndex = 0;
@@ -220,8 +220,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
-            this.middlePanel.ResumeLayout(false);
-            this.middlePanel.PerformLayout();
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

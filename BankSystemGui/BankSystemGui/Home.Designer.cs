@@ -30,16 +30,18 @@
         {
             this.dtPicker = new System.Windows.Forms.DateTimePicker();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnAbout = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.btnSettings = new FontAwesome.Sharp.IconButton();
             this.btnOthers = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.profileButton = new FontAwesome.Sharp.IconButton();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.middlePanel = new System.Windows.Forms.Panel();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.labelName = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtPicker
@@ -58,13 +60,29 @@
             this.panelMenu.Controls.Add(this.btnDashboard);
             this.panelMenu.Controls.Add(this.btnSettings);
             this.panelMenu.Controls.Add(this.btnOthers);
-            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.profileButton);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.ForeColor = System.Drawing.Color.Black;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(139, 472);
             this.panelMenu.TabIndex = 6;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
+            this.btnExit.IconColor = System.Drawing.Color.White;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExit.Location = new System.Drawing.Point(0, 390);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(139, 81);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "Exit";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // btnAbout
             // 
@@ -132,21 +150,22 @@
             this.btnOthers.UseVisualStyleBackColor = true;
             this.btnOthers.Click += new System.EventHandler(this.btnOthers_Click);
             // 
-            // iconButton1
+            // profileButton
             // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(139, 84);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Profile";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.profileButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileButton.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.profileButton.IconColor = System.Drawing.Color.White;
+            this.profileButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.profileButton.Location = new System.Drawing.Point(0, 0);
+            this.profileButton.Name = "profileButton";
+            this.profileButton.Size = new System.Drawing.Size(139, 84);
+            this.profileButton.TabIndex = 0;
+            this.profileButton.Text = "Profile";
+            this.profileButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.profileButton.UseVisualStyleBackColor = true;
+            this.profileButton.Click += new System.EventHandler(this.profileButton_Click);
             // 
             // bottomPanel
             // 
@@ -159,6 +178,7 @@
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.labelName);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(139, 0);
             this.topPanel.Name = "topPanel";
@@ -173,21 +193,14 @@
             this.middlePanel.TabIndex = 9;
             this.middlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.middlePanel_Paint);
             // 
-            // btnExit
+            // labelName
             // 
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
-            this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExit.Location = new System.Drawing.Point(0, 390);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(139, 81);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Exit";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(80, 28);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(35, 13);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "label1";
             // 
             // Home
             // 
@@ -205,6 +218,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -219,7 +234,8 @@
         private FontAwesome.Sharp.IconButton btnAbout;
         private FontAwesome.Sharp.IconButton btnSettings;
         private FontAwesome.Sharp.IconButton btnOthers;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton profileButton;
         private FontAwesome.Sharp.IconButton btnExit;
+        private System.Windows.Forms.Label labelName;
     }
 }

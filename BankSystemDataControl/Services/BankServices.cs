@@ -20,9 +20,15 @@ namespace MyProjects.Services{
         1. As an admin, I would like to view only the names of the customers
         2. As an admin, I would like to view all of the information of every customer.
         */
-        public string ReturnInfoName(string name){
-            string infoNames = _repo.ReturnName(name);
+        public List<InfoModel> ReturnAll()
+        {
+            List<InfoModel> newList = _repo.ReturnAll().ToList<InfoModel>();
+            return newList;
+        }
+        public string ReturnUserName(string name){
+            string infoNames = _repo.ReturnUserName(name);
             return infoNames;
         }
+        
     }
 }

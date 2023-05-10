@@ -24,7 +24,7 @@ namespace BankSystemGui
         {
             username = txtUsername.Text;
             password = txtPassword.Text;
-            if (username == "testing" && password == "testing")
+            if (username == "SAMPLE" && password == "SAMPLEPASSWORD")
             {
                 this.Hide();   
                 Home h = new Home();
