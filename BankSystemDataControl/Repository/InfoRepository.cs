@@ -65,7 +65,7 @@ public class InfoRepository
             {
                 if (name.Equals(results[0]))
                 {
-                    return n = (string)results[0];
+                    return "valid";
                 }
                 
             }

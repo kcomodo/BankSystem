@@ -28,7 +28,7 @@ class Program
         
         */
         //DisplayUserName(name);
-        string testing = DisplayUserName("SAMPLE");
+        string testing = DisplayUserName("SAMPLE1");
         Console.WriteLine(testing);
         List<InfoModel> somethingList = ReturnAll();
         foreach(var i in somethingList)
