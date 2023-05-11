@@ -8,8 +8,6 @@ var app = express();
 var dotenv = require('dotenv');
 dotenv.config();
 
-var databaseHost = process.env.DATABASE_HOST;
-
 app.use(bodyParser.json());
 const mysql = require('mysql2');
 

@@ -9,8 +9,8 @@
   overflow: hidden;
   background-color: grey;
   transition: width 300ms;
-  border: 3px solid black;
-  transition: border-width 300ms;
+  border: 0px solid black;
+  transition: border-width width 300ms;
   border-bottom-right-radius: 10px;
   float: left;
 }
@@ -27,6 +27,13 @@
     border: 3px solid black;
     border-bottom-right-radius: 10px;
   }
+
+.homeIcon, .logoutIcon {
+  display: block;
+  width: 10%;
+  height: 10%;
+  float: right;
+}
 
 .box2 {
     display: block;  
@@ -51,7 +58,6 @@
     display: block;
     text-decoration: none;
     color: black;
-    background-color: grey;
     padding-right: 30px;
     padding-left: 20px;
     width: var(--navBarWidth);
@@ -76,12 +82,15 @@
     padding-bottom: 15px;
 }
 
-.dropDownIcon {
+.dropDownIcon.inactive {
     display: block;
     float: right;
-    height: 30px;
-    width: 20%;
-    z-index: 3;
+    height: 25px;
+    width: 12%;
+    margin: 10px;
+    padding: 0px;
+    transform: rotate(-90deg);
+    transition: 200ms;
 }
 
 .dropdown-menu.active {
@@ -91,8 +100,18 @@
     visibility: visible;
     overflow: hidden;
     background-color: grey;
-    transition-duration: 300ms;
+    transition-duration: 200ms;
     transition-property: all;
+}
+
+.dropDownIcon.active {
+  display: block;
+    float: right;
+    height: 25px;
+    width: 12%;
+    margin: 10px;
+    padding: 0px;
+    transition: 200ms;
 }
 
 .dropdown-menu.inactive {
@@ -103,6 +122,6 @@
   background-color: grey;
   height: 0%;
     width: 0%;
-  transition-duration: 300ms;
+  transition-duration: 200ms;
   transition-property: all;
 }
