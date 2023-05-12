@@ -1,9 +1,8 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
-using MyProjects.Models;
 using System.Xml.Linq;
 using System.Globalization;
-using BankSystemDataControl.Models;
+using MyProjects.Models;
 
 namespace MyProjects.Repository
 {
