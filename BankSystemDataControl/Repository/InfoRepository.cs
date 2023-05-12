@@ -1,22 +1,25 @@
-
-using System;
+﻿using System;
 using MySql.Data.MySqlClient;
 using MyProjects.Models;
 using System.Xml.Linq;
 using System.Globalization;
+using BankSystemDataControl.Models;
 
-namespace MyProjects.Repository{
-public class InfoRepository
-{       
+namespace MyProjects.Repository
+{
+    public class InfoRepository
+    {
 
-        public List<InfoModel> InfoModels{get;set;}
+        public List<InfoModel> InfoModels { get; set; }
         private MySqlConnection _connection;
-        public InfoRepository(){
+        public InfoRepository()
+        {
             string connectionString = "server=istwebclass.org;userid=anewbaue_CatExposure;password=Megumin56;database=anewbaue_Bank";
             _connection = new MySqlConnection(connectionString);
             _connection.Open();
         }
-        ~InfoRepository(){
+        ~InfoRepository()
+        {
             _connection.Close();
         }
         public IEnumerable<InfoModel> ReturnAll()
@@ -28,7 +31,7 @@ public class InfoRepository
 
             while (results.Read())
             {
-                
+
                 InfoModel i = new InfoModel()
                 {
                     ID = (int)results[0],
@@ -43,9 +46,9 @@ public class InfoRepository
                     PhoneNumber = (string)results[9],
                     DateOfBirth = DateTime.ParseExact(results.GetString(10), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture),
                     Password = (string)results[11]
-                    
+
                 };
-                
+
 
                 newList.Add(i);
 
@@ -83,14 +86,14 @@ public class InfoRepository
             var statement = "Select clientUserName, clientPassword from bank_client";
             var command = new MySqlCommand(statement, _connection);
             var results = command.ExecuteReader();
-           
+
             while (results.Read())
             {
                 if (username.Equals(results[0]) && password.Equals(results[1]))
                 {
                     return true;
                 }
-                
+
             }
 
             results.Close();
@@ -99,32 +102,32 @@ public class InfoRepository
 
 
     }
-      
-        
-    }
-  /*
-        public List<InfoModel> info {get;set;}
-        InfoModel infoclass = new InfoModel(){
-            ID = 12356,
-            Name = "Bob",
-            DateOfBirth = "10/3/1999",
-            Address = "123 Somewhere downtown"
 
-        };
-        InfoModel infoclass2 = new InfoModel(){
-            ID = 00000,
-            Name = "Quang",
-            DateOfBirth = "12/2/2000",
-            Address = "123 Somewhere Uptown"
 
-        };
-        InfoModel infoclass3 = new InfoModel(){
-            ID = 99999,
-            Name = "Rick",
-            DateOfBirth = "7/5/1987",
-            Address = "123 Somewhere downtown"
+}
+/*
+      public List<InfoModel> info {get;set;}
+      InfoModel infoclass = new InfoModel(){
+          ID = 12356,
+          Name = "Bob",
+          DateOfBirth = "10/3/1999",
+          Address = "123 Somewhere downtown"
 
-        };
-        */
+      };
+      InfoModel infoclass2 = new InfoModel(){
+          ID = 00000,
+          Name = "Quang",
+          DateOfBirth = "12/2/2000",
+          Address = "123 Somewhere Uptown"
 
-        //Create a list that holds all the bank info from each person
+      };
+      InfoModel infoclass3 = new InfoModel(){
+          ID = 99999,
+          Name = "Rick",
+          DateOfBirth = "7/5/1987",
+          Address = "123 Somewhere downtown"
+
+      };
+      */
+
+//Create a list that holds all the bank info from each person
