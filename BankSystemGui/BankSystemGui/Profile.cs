@@ -7,15 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MyProjects.Models;
-using MyProjects.Services;
-using MyProjects;
+
 namespace BankSystemGui
 {
     public partial class Profile : Form
     {
-        BankServices bank = new BankServices();
-        InfoModel model = new InfoModel();
+ 
        
         public Profile()
         {

@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
-using MyProjects.Services;
-using MyProjects.Repository;
+using BankSystemGui;
+using BankSystemGui.Repository;
+using BankSystemGui.Services;
+using BankSystemGui.Models;
 
 namespace BankSystemGui
 {
@@ -17,7 +19,6 @@ namespace BankSystemGui
     {
         public static string username;
         public static string password;
-
         public Login()
         {
             InitializeComponent();
@@ -27,9 +28,10 @@ namespace BankSystemGui
         {
             username = txtUsername.Text;
             password = txtPassword.Text;
+            bool validation = ValidateLogin(username,password);
             
-          
-            if(username == "SAMPLE1" && password == "SAMPLEPASSWORD")
+
+            if (validation)
             {
                 this.Hide();
                 Home h = new Home();
@@ -81,6 +83,14 @@ namespace BankSystemGui
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public static bool ValidateLogin(string username, string password)
+        {
+            InfoRepository program = new InfoRepository();
+            BankServices bank = new BankServices();
+            bool validation = bank.ValidateLogin(username, password);
+            return validation;
         }
     }
 }

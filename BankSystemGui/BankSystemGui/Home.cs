@@ -1,5 +1,4 @@
-﻿using MyProjects.Models;
-using MyProjects.Services;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +12,7 @@ namespace BankSystemGui
 {
     public partial class Home : Form
     {
-        BankServices bank = new BankServices();
-        InfoModel model = new InfoModel();
+        
         public Home()
         {
             InitializeComponent();
