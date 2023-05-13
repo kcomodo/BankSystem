@@ -1,7 +1,7 @@
 using BankSystemDataControl;
 namespace BankSystemTest
 {
-    public class UnitTest1
+    public class BankServiceTest
     {
         [Fact]
         public void Test1()
