@@ -21,65 +21,6 @@ public class InfoRepository
         ~InfoRepository(){
             _connection.Close();
         }
-        public IEnumerable<InfoModel> ReturnAll()
-        {
-            var statement = "Select * from bank_client";
-            var command = new MySqlCommand(statement, _connection);
-            var results = command.ExecuteReader();
-            List<InfoModel> newList = new List<InfoModel>();
-
-            while (results.Read())
-            {
-                
-                InfoModel i = new InfoModel()
-                {
-                    ID = (int)results[0],
-                    FirstName = (string)results[1],
-                    LastName = (string)results[2],
-                    UserName = (string)results[3],
-                    Email = (string)results[4],
-                    State = (string)results[5],
-                    City = (string)results[6],
-                    ZipCode = (int)results[7],
-                    Address = (string)results[8],
-                    PhoneNumber = (string)results[9],
-                    DateOfBirth = DateTime.ParseExact(results.GetString(10), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture),
-                    Password = (string)results[11]
-                    
-                };
-                
-
-                newList.Add(i);
-
-            }
-            results.Close();
-            return newList;
-        }
-        public IEnumerable<InfoModel> ReturnLogin()
-        {
-            var statement = "Select clientUserName, clientPassword from bank_client";
-            var command = new MySqlCommand(statement, _connection);
-            var results = command.ExecuteReader();
-            List<InfoModel> newList = new List<InfoModel>();
-
-            while (results.Read())
-            {
-
-                InfoModel i = new InfoModel()
-                {
-                    UserName = (string)results[0],
-                    Password = (string)results[1]
-
-                };
-
-
-                newList.Add(i);
-
-            }
-            results.Close();
-            return newList;
-        }
-
         public bool ValidateLogin(string username, string password)
         {
             var statement = "Select clientUserName, clientPassword from bank_client";
@@ -98,7 +39,12 @@ public class InfoRepository
             results.Close();
             return false;
         }
+        /*
+        public InfoModel registerAccount()
+        {
 
+        }
+        */
 
     }
       

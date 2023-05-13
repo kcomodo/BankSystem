@@ -17,8 +17,8 @@ namespace BankSystemGui
         public static string email;
         public static string userName;
         public static string password;
-        public static char phonenumber;
-        
+        public static string phonenumber;
+        public static DateTime dateOfBirth;
 
         public CreateAccount1()
         {
@@ -38,6 +38,9 @@ namespace BankSystemGui
             lastName = txtLastNameCreate.Text;
             userName = txtUserCreate.Text;
             password = txtPassCreate.Text;
+            email = txtEmailCreate.Text;
+            phonenumber = txtPhoneNumberCreate.Text;
+            dateOfBirth = dateEdit.Value;
             CreateAccount2 c2 = new CreateAccount2();
             c2.Show();
 
@@ -46,6 +49,30 @@ namespace BankSystemGui
         private void txtFirstNameCreate_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkButton_Click(object sender, EventArgs e)
+        {
+            firstName = txtFirstNameCreate.Text;
+            lastName = txtLastNameCreate.Text;
+            userName = txtUserCreate.Text;
+            password = txtPassCreate.Text;
+            email = txtEmailCreate.Text;
+            phonenumber = txtPhoneNumberCreate.Text;
+            dateOfBirth = dateEdit.Value;
+
+            testFirst.Text = firstName;
+            testLast.Text = lastName; 
+            testUser.Text = userName;
+            testPass.Text = password;
+            testEmail.Text = email;
+            testPhone.Text = phonenumber;
+            testDate.Text = dateEdit.Value.ToString("M/d/yyyy");
+        }
+
+        private void txtPassCreate_TextChanged(object sender, EventArgs e)
+        {
+            txtPassCreate.PasswordChar = '*';
         }
     }
 }
