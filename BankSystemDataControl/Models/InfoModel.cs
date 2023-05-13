@@ -1,5 +1,5 @@
 ﻿using System;
-namespace MyProjects.Models
+namespace BankSystemDataControl.Models
 {
     public class InfoModel
     {

@@ -2,11 +2,11 @@
 using MySql.Data.MySqlClient;
 using System.Xml.Linq;
 using System.Globalization;
-using MyProjects.Models;
-
-namespace MyProjects.Repository
+using BankSystemDataControl.Models;
+//Data access layer
+namespace BankSystemDataControl.Repository
 {
-    public class InfoRepository
+    public class InfoRepository : iInfoRepository
     {
 
         public List<InfoModel> InfoModels { get; set; }
@@ -21,6 +21,7 @@ namespace MyProjects.Repository
         {
             _connection.Close();
         }
+        /*
         public IEnumerable<InfoModel> ReturnAll()
         {
             var statement = "Select * from bank_client";
@@ -55,6 +56,7 @@ namespace MyProjects.Repository
             results.Close();
             return newList;
         }
+        */
         public IEnumerable<InfoModel> ReturnLogin()
         {
             var statement = "Select clientUserName, clientPassword from bank_client";
