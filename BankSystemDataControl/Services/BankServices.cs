@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using MyProjects.Models;
-using MyProjects.Repository;
+using BankSystemDataControl.Models;
+using BankSystemDataControl.Repository;
 using System.Linq;
-namespace MyProjects.Services
+namespace BankSystemDataControl.Services
 {
-    public class BankServices
+    public class BankServices : IBankServices
     {
-        InfoRepository _repo;
-        public BankServices()
+        iInfoRepository _repo;
+        public BankServices(iInfoRepository bankRepo)
         {
-            _repo = new InfoRepository();
+            _repo = bankRepo;
         }
 
         /*
@@ -20,11 +20,13 @@ namespace MyProjects.Services
         4. As an admin, I would like to delete previous users
         5. As an admin, I would like to edit users
         */
+        /*
         public List<InfoModel> ReturnAll()
         {
             List<InfoModel> newList = _repo.ReturnAll().ToList<InfoModel>();
             return newList;
         }
+        */
         public List<InfoModel> ReturnLogin()
         {
             List<InfoModel> newList = _repo.ReturnLogin().ToList<InfoModel>();
