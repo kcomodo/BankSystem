@@ -1,0 +1,186 @@
+:root {
+    --dropDownTrans: 300ms;
+    --mobileFontSize: 15px;
+    --mobileFriendly: 480px;
+  }
+
+.navBar {
+  position: fixed;
+}
+
+  .box1.inactive {
+    display: flex; 
+    flex-direction: column; 
+    width: 0px;
+    height: 500px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    background: linear-gradient(90deg, rgba(203,254,247,1) 0%, rgba(232,254,255,1) 54%, rgba(244,255,254,1) 100%);
+    transition: width 300ms;
+    border: 0px solid black;
+    transition: border-width 300ms, width 300ms;
+    border-bottom-right-radius: 10px;
+    float: left;
+  }
+  
+  .box1.active {
+      display: flex;  
+      flex-direction: column;
+      width: 320px;
+      --navBarWidth: width;
+      overflow: hidden;
+      height: 500px;
+      background: linear-gradient(90deg, rgba(203,254,247,1) 0%, rgba(232,254,255,1) 54%, rgba(244,255,254,1) 100% );
+      transition: width 300ms;
+      float: left;
+      border: 3px solid black;
+      border-bottom-right-radius: 10px;
+    }
+  
+  .box1 div {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .homeIcon, .logoutIcon, .emailIcon, .profileIcon, .passwordIcon, .phoneIcon, .usernameIcon {
+    display: block;
+    position: relative;
+    width: 15%;
+    margin-left: 6%;
+    margin-top: 5px;
+    float: right;
+    transition: 500ms;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  
+  .box2 {
+      display: block;  
+      width: 10%;
+    height: 10%;
+    float: left;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black ;
+    border-right: 2px solid black ;
+    transition: 300ms;
+    }
+  
+  .box2:hover {
+      width: 10.5%;
+    height: 10.5%;
+    transition: 300ms;
+  }
+  
+    .link-styles, .dropdown-profile {
+      position: relative;
+      display: flex;
+      text-decoration: none;
+      color: black;
+      padding-right: 30px;
+      overflow: hidden;
+      width: 100%;
+      border-bottom: 1px solid black;
+      font-size: 32px;
+      transition: 300ms;
+  }
+  
+  .link-styles:hover, .dropdown-profile:hover {
+      background-color: rgba(255, 255, 255);
+      border-radius: 15px;
+      transition: 300ms;
+  } 
+  
+  .dropdownItem {
+      margin-top: 5px;
+      width: 100%;
+      margin-left: 10%;
+  }
+  .dropdown-profile {
+      cursor: pointer;
+      overflow: hidden;
+      height: 30px;
+      padding-bottom: 15px;
+  }
+  
+  .dropDownIcon.inactive {
+      height: 25px;
+      width: 12%;
+      margin: 10px;
+      margin-left: 10%;
+      transform: rotate(-90deg);
+      transition: var(--dropDownTrans);
+  }
+  
+  .dropdown-menu .link-styles {
+    width: 100%;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .dropdown-menu.active {
+      display: flex;
+      flex-direction: column;
+      height: 290px;
+      width: 100%;
+      visibility: visible;
+      overflow: hidden;
+      background: linear-gradient(90deg, rgba(203,254,247,1) 0%, rgba(232,254,255,1) 54%, rgba(244,255,254,1) 100%);
+      transition-duration: var(--dropDownTrans);
+      transition-property: all;
+  }
+  
+  .dropDownIcon.active {
+      height: 25px;
+      width: 12%;
+      margin: 10px;
+      margin-left: 10%;
+      padding: 0px;
+      transition: var(--dropDownTrans);
+  }
+  
+  .dropdown-menu.inactive {
+      position: block;
+      flex-direction: column;
+      display: flex;
+      visibility: hidden;
+      overflow: hidden;
+      background: linear-gradient(90deg, rgba(203,254,247,1) 0%, rgba(232,254,255,1) 54%, rgba(244,255,254,1) 100%);
+    height: 0%;
+      width: 0%;
+    transition-duration: var(--dropDownTrans);
+    transition-property: all;
+  }
+  
+  @media (max-width: 480px) {
+    .box2, .box2:hover {
+      width: 10%;
+      height: 10%;
+    }
+  
+    .box1.inactive {
+      height: 400px;
+    }
+  
+    .box1.active {
+      width: 45%;
+      height: 400px;
+    }
+  
+    .link-styles, .dropdown-profile {
+      font-size: 22px;
+    }
+  
+    .dropdown-profile, .dropdown-profile:hover {
+      padding-right: 0px;
+      border-radius: 0px;
+    }
+  
+    .dropDownIcon.active, .dropDownIcon.inactive {
+      float: right;
+    }
+  
+    .dropdown-menu.active {
+      height: 220px;
+    }
+  }

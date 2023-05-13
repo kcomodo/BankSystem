@@ -1,24 +1,17 @@
-#homePage {
-    display: block;
+.section1 {
+    display: flex;
     width: 100%;
     height: 100%;
     background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
-#bankLogoCenter {
+.section2 {
     display: flex;
-    justify-content: center;
-}
-#bankLogo {
-    position: absolute;
-    top: 40%;
-    width: 10%;
-}
-
-#sampleText {
-    position: relative;
-    top: 60%;
-    left: 30%;
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;   
 }

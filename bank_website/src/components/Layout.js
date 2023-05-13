@@ -1,10 +1,13 @@
-import { Outlet, Link } from "react-router-dom";
-import '../styles/Layout.css';
-import React, {useState} from 'react';
+import React from "react";
+import {Outlet} from "react-router-dom";
+import Navbar from "./NavBar";
 
 function Layout() {
   return (
-    <h1>a</h1>
+    <>
+      <Navbar />
+      <Outlet />
+    </>
   );
   }
 export default Layout;
