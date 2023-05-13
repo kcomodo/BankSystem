@@ -37,6 +37,18 @@
             this.txtZipCreate = new System.Windows.Forms.TextBox();
             this.txtAddressCreate = new System.Windows.Forms.TextBox();
             this.btnCreateAccount = new System.Windows.Forms.Button();
+            this.lblState = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.lblZip = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblFirst = new System.Windows.Forms.Label();
+            this.lblLast = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.checkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -114,11 +126,132 @@
             this.btnCreateAccount.UseVisualStyleBackColor = true;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
+            // lblState
+            // 
+            this.lblState.AutoSize = true;
+            this.lblState.Location = new System.Drawing.Point(548, 27);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(35, 13);
+            this.lblState.TabIndex = 9;
+            this.lblState.Text = "label5";
+            // 
+            // lblCity
+            // 
+            this.lblCity.AutoSize = true;
+            this.lblCity.Location = new System.Drawing.Point(551, 56);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(35, 13);
+            this.lblCity.TabIndex = 10;
+            this.lblCity.Text = "label6";
+            // 
+            // lblZip
+            // 
+            this.lblZip.AutoSize = true;
+            this.lblZip.Location = new System.Drawing.Point(551, 88);
+            this.lblZip.Name = "lblZip";
+            this.lblZip.Size = new System.Drawing.Size(35, 13);
+            this.lblZip.TabIndex = 11;
+            this.lblZip.Text = "label7";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(548, 117);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(35, 13);
+            this.lblAddress.TabIndex = 12;
+            this.lblAddress.Text = "label8";
+            // 
+            // lblFirst
+            // 
+            this.lblFirst.AutoSize = true;
+            this.lblFirst.Location = new System.Drawing.Point(341, 27);
+            this.lblFirst.Name = "lblFirst";
+            this.lblFirst.Size = new System.Drawing.Size(35, 13);
+            this.lblFirst.TabIndex = 13;
+            this.lblFirst.Text = "label9";
+            // 
+            // lblLast
+            // 
+            this.lblLast.AutoSize = true;
+            this.lblLast.Location = new System.Drawing.Point(344, 44);
+            this.lblLast.Name = "lblLast";
+            this.lblLast.Size = new System.Drawing.Size(41, 13);
+            this.lblLast.TabIndex = 14;
+            this.lblLast.Text = "label10";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(344, 61);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(41, 13);
+            this.lblUser.TabIndex = 15;
+            this.lblUser.Text = "label11";
+            // 
+            // lblPass
+            // 
+            this.lblPass.AutoSize = true;
+            this.lblPass.Location = new System.Drawing.Point(344, 78);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(41, 13);
+            this.lblPass.TabIndex = 16;
+            this.lblPass.Text = "label12";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(344, 95);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(41, 13);
+            this.lblEmail.TabIndex = 17;
+            this.lblEmail.Text = "label13";
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(344, 117);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(41, 13);
+            this.lblPhone.TabIndex = 18;
+            this.lblPhone.Text = "label14";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(347, 145);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(41, 13);
+            this.lblDate.TabIndex = 19;
+            this.lblDate.Text = "label15";
+            // 
+            // checkButton
+            // 
+            this.checkButton.Location = new System.Drawing.Point(484, 235);
+            this.checkButton.Name = "checkButton";
+            this.checkButton.Size = new System.Drawing.Size(125, 54);
+            this.checkButton.TabIndex = 20;
+            this.checkButton.Text = "Check";
+            this.checkButton.UseVisualStyleBackColor = true;
+            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
+            // 
             // CreateAccount2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkButton);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblPhone);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblPass);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.lblLast);
+            this.Controls.Add(this.lblFirst);
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.lblZip);
+            this.Controls.Add(this.lblCity);
+            this.Controls.Add(this.lblState);
             this.Controls.Add(this.btnCreateAccount);
             this.Controls.Add(this.txtAddressCreate);
             this.Controls.Add(this.txtZipCreate);
@@ -147,5 +280,17 @@
         private System.Windows.Forms.TextBox txtZipCreate;
         private System.Windows.Forms.TextBox txtAddressCreate;
         private System.Windows.Forms.Button btnCreateAccount;
+        private System.Windows.Forms.Label lblState;
+        private System.Windows.Forms.Label lblCity;
+        private System.Windows.Forms.Label lblZip;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblFirst;
+        private System.Windows.Forms.Label lblLast;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Button checkButton;
     }
 }
