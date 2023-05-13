@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5A+n3pOuxiN6IKaPaCS2jrAIkKJtdMHNukVJimm14gjs47Gv8M5BvgHerFfWQPHmQ9bHFjK4MBw6sAalwBNnAw==",
+  "dgSpecHash": "//MgHzP2V4h9DXxeCmH95GLHy0rWrTHXaWcSTU1HxPR+3i4oy+lBduKBRVE8iRkdKms6GZDUgqWufGma4BcXVg==",
   "success": true,
-  "projectFilePath": "D:\\MyProjects\\BankSystem\\BankSystemDataControl\\BankSystemDataControl.csproj",
+  "projectFilePath": "D:\\MyProjects\\banksystem\\BankSystemDataControl\\BankSystemDataControl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Quang Ho\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\Quang Ho\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",
