@@ -35,7 +35,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.displayIncorrect = new System.Windows.Forms.Label();
             this.btnSignup = new System.Windows.Forms.Button();
-            this.testing = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -106,21 +105,11 @@
             this.btnSignup.UseVisualStyleBackColor = true;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
-            // testing
-            // 
-            this.testing.AutoSize = true;
-            this.testing.Location = new System.Drawing.Point(652, 162);
-            this.testing.Name = "testing";
-            this.testing.Size = new System.Drawing.Size(35, 13);
-            this.testing.TabIndex = 7;
-            this.testing.Text = "label1";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.testing);
             this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.displayIncorrect);
             this.Controls.Add(this.txtPassword);
@@ -146,7 +135,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label displayIncorrect;
         private System.Windows.Forms.Button btnSignup;
-        private System.Windows.Forms.Label testing;
     }
 }
 
