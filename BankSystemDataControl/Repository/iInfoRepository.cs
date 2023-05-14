@@ -6,8 +6,8 @@ namespace BankSystemDataControl.Repository
     { 
         List<InfoModel> InfoModels { get; set; }
 
-        //public IEnumerable<InfoModel> ReturnAll();
+        public IEnumerable<InfoModel> ReturnAll();
         public IEnumerable<InfoModel> ReturnLogin();
-        public bool ValidateLogin(string username, string password);
+        //public bool ValidateLogin(string username, string password);
     }
 }

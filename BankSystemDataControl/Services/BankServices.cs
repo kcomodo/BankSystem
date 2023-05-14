@@ -20,23 +20,25 @@ namespace BankSystemDataControl.Services
         4. As an admin, I would like to delete previous users
         5. As an admin, I would like to edit users
         */
-        /*
+        
         public List<InfoModel> ReturnAll()
         {
             List<InfoModel> newList = _repo.ReturnAll().ToList<InfoModel>();
             return newList;
         }
-        */
+        
         public List<InfoModel> ReturnLogin()
         {
             List<InfoModel> newList = _repo.ReturnLogin().ToList<InfoModel>();
             return newList;
         }
+        /*
         public bool ValidateLogin(string username, string password)
         {
             bool infoNames = _repo.ValidateLogin(username, password);
             return infoNames;
         }
+        */
 
     }
 }
