@@ -6,7 +6,8 @@ using BankSystemDataControl.Models;
 //Data access layer
 namespace BankSystemDataControl.Repository
 {
-    public class InfoRepository : iInfoRepository
+    public interface IOperationSingleton : iInfoRepository { }
+    public class InfoRepository : iInfoRepository, IOperationSingleton
     {
 
         public List<InfoModel> InfoModels { get; set; }
@@ -21,7 +22,8 @@ namespace BankSystemDataControl.Repository
         {
             _connection.Close();
         }
-        /*
+       
+
         public IEnumerable<InfoModel> ReturnAll()
         {
             var statement = "Select * from bank_client";
@@ -56,7 +58,7 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return newList;
         }
-        */
+        
         public IEnumerable<InfoModel> ReturnLogin()
         {
             var statement = "Select clientUserName, clientPassword from bank_client";
@@ -81,7 +83,7 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return newList;
         }
-
+        /*
         public bool ValidateLogin(string username, string password)
         {
             var statement = "Select clientUserName, clientPassword from bank_client";
@@ -100,6 +102,7 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return false;
         }
+        */
 
 
     }
