@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using BankSystemGui.Models;
 using BankSystemGui.Repository;
 using System.Linq;
+using System;
+
 namespace BankSystemGui.Services{
     public class BankServices{
         InfoRepository _repo;
@@ -21,6 +23,12 @@ namespace BankSystemGui.Services{
             bool infoNames = _repo.ValidateLogin(username,password);
             return infoNames;
         }
+        public void registerAccount(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d, string p)
+        {
+            _repo.registerAccount(f, l, u, e, s, c, z, a, phone, d,p);
+        }
         
+
+
     }
 }
