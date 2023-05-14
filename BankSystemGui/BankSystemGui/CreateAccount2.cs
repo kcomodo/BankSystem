@@ -47,6 +47,7 @@ namespace BankSystemGui
             email = CreateAccount1.email;
             userName = CreateAccount1.userName;
             password = CreateAccount1.password;
+            phonenumber = CreateAccount1.phonenumber;
             state = txtStateCreate.Text;
             city = txtCityCreate.Text;
             zip = Int32.Parse(txtZipCreate.Text);
