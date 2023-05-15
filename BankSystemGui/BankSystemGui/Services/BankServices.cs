@@ -23,6 +23,11 @@ namespace BankSystemGui.Services{
             bool infoNames = _repo.ValidateLogin(username,password);
             return infoNames;
         }
+        public bool validateEmail(string email)
+        {
+            bool infoEmail = _repo.validateEmail(email);
+            return infoEmail;
+        }
         public void registerAccount(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d, string p)
         {
             _repo.registerAccount(f, l, u, e, s, c, z, a, phone, d,p);

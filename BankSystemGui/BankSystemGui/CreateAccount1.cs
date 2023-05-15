@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankSystemGui.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace BankSystemGui
         public static string password;
         public static string phonenumber;
         public static DateTime dateOfBirth;
-
+        BankServices bank = new BankServices();
         public CreateAccount1()
         {
             InitializeComponent();
@@ -34,15 +35,30 @@ namespace BankSystemGui
         {
             
             this.Hide();
-            firstName = txtFirstNameCreate.Text;
-            lastName = txtLastNameCreate.Text;
-            userName = txtUserCreate.Text;
-            password = txtPassCreate.Text;
-            email = txtEmailCreate.Text;
-            phonenumber = txtPhoneNumberCreate.Text;
-            dateOfBirth = dateEdit.Value;
-            CreateAccount2 c2 = new CreateAccount2();
-            c2.Show();
+            try
+            {
+                firstName = txtFirstNameCreate.Text;
+                lastName = txtLastNameCreate.Text;
+                userName = txtUserCreate.Text;
+                password = txtPassCreate.Text;
+                phonenumber = txtPhoneNumberCreate.Text;
+                dateOfBirth = dateEdit.Value;
+                bool validation = bank.validateEmail(txtEmailCreate.Text);
+                if (validation)
+                {
+                    email = txtEmailCreate.Text;
+                    CreateAccount2 c2 = new CreateAccount2();
+                    c2.Show();
+                }
+            }
+            catch
+            {
+
+            }
+            
+            
+            
+            
 
         }
 
