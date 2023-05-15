@@ -39,12 +39,35 @@ namespace BankSystemGui
             {
                 firstName = txtFirstNameCreate.Text;
                 lastName = txtLastNameCreate.Text;
-                userName = txtUserCreate.Text;
-                password = txtPassCreate.Text;
+               
+                bool validationUserName = bank.validateUserName(txtUserCreate.Text);
+                bool validationPassword = bank.validatePassword(txtPassCreate.Text);
+                bool validationEmail = bank.validateEmail(txtEmailCreate.Text);
+                if(validationUserName)
+                {
+                    userName = txtUserCreate.Text;
+                    
+                }
+                else
+                {
+                    txtUserCreate.Text = "";
+                    checkUsername.Text = "Invalid Username";
+                }
+                if (validationPassword)
+                {
+                    password = txtPassCreate.Text;
+
+                }
+                else
+                {
+                    txtPassCreate.Text = "";
+                    checkPassword.Text = "Invalid Password";
+                }
+
                 phonenumber = txtPhoneNumberCreate.Text;
                 dateOfBirth = dateEdit.Value;
-                bool validation = bank.validateEmail(txtEmailCreate.Text);
-                if (validation)
+                
+                if (validationEmail)
                 {
                     email = txtEmailCreate.Text;
                     CreateAccount2 c2 = new CreateAccount2();
@@ -78,8 +101,30 @@ namespace BankSystemGui
             lastName = txtLastNameCreate.Text;
             userName = txtUserCreate.Text;
             password = txtPassCreate.Text;
-            bool validation = bank.validateEmail(txtEmailCreate.Text);
-            if (validation)
+            bool validationUserName = bank.validateUserName(txtUserCreate.Text);
+            bool validationPassword = bank.validatePassword(txtPassCreate.Text);
+            bool validationEmail = bank.validateEmail(txtEmailCreate.Text);
+            if (validationUserName)
+            {
+                userName = txtUserCreate.Text;
+
+            }
+            else
+            {
+                txtUserCreate.Text = "";
+                checkUsername.Text = "Invalid Username";
+            }
+            if (validationPassword)
+            {
+                password = txtPassCreate.Text;
+
+            }
+            else
+            {
+                txtPassCreate.Text = "";
+                checkPassword.Text = "Invalid Password";
+            }
+            if (validationEmail)
             {
                 email = txtEmailCreate.Text;
                 CreateAccount2 c2 = new CreateAccount2();
