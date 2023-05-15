@@ -34,81 +34,70 @@ namespace BankSystemGui
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            
-            this.Hide();
-            try
-            {
                 firstName = txtFirstNameCreate.Text;
                 lastName = txtLastNameCreate.Text;
-                dateOfBirth = dateEdit.Value;
+                userName = txtUserCreate.Text;
+                password = txtPassCreate.Text;
                 bool validationUserName = bank.validateUserName(txtUserCreate.Text);
                 bool validationPassword = bank.validatePassword(txtPassCreate.Text);
                 bool validationEmail = bank.validateEmail(txtEmailCreate.Text);
                 bool validationPhone = bank.validatePhoneNumber(txtPhoneNumberCreate.Text);
-                if(validationUserName)
+                if (validationUserName && validationPassword && validationEmail & validationPhone)
                 {
                     userName = txtUserCreate.Text;
-                    
-                }
-                else
+                    password = txtPassCreate.Text;
+
+                    phonenumber = Regex.Replace(txtPhoneNumberCreate.Text, @"[^0-9]", "");
+                    if (phonenumber.Length > 3)
+                    {
+                        phonenumber = phonenumber.Insert(3, "-");
+                    }
+                    if (phonenumber.Length > 7)
+                    {
+                        phonenumber = phonenumber.Insert(7, "-");
+                    }
+                    email = txtEmailCreate.Text;
+                    dateOfBirth = dateEdit.Value;
+
+                    testFirst.Text = firstName;
+                    testLast.Text = lastName;
+                    testUser.Text = userName;
+                    testPass.Text = password;
+                    testEmail.Text = email;
+                    testPhone.Text = phonenumber;
+                    testDate.Text = dateEdit.Value.ToString("M/d/yyyy");
+                this.Hide();
+                CreateAccount2 c2 = new CreateAccount2();
+                c2.Show();
+
+            }
+                if (!validationPassword)
                 {
                     txtUserCreate.Text = "";
                     checkUsername.Text = "Invalid Username";
                 }
-                if (validationPassword)
-                {
-                    password = txtPassCreate.Text;
-
-                }
-                else
+                if (!validationPassword)
                 {
                     txtPassCreate.Text = "";
                     checkPassword.Text = "Invalid Password";
-                }
-                if (validationPhone)
-                {
-                    phonenumber = txtPhoneNumberCreate.Text;
-                    string cleanPhoneNumber = Regex.Replace(phonenumber, @"[^0-9]", "");
-                    if (cleanPhoneNumber.Length > 3)
-                    {
-                        cleanPhoneNumber = cleanPhoneNumber.Insert(3, "-");
-                    }
-                    if (cleanPhoneNumber.Length > 7)
-                    {
-                        cleanPhoneNumber = cleanPhoneNumber.Insert(7, "-");
-                    }
-                    phonenumber = cleanPhoneNumber;
-
 
                 }
-                else
+                if (!validationPhone)
                 {
                     txtPhoneNumberCreate.Text = "";
                     checkPhoneNumber.Text = "Invalid Phone Number";
                 }
 
-
-
-                if (validationEmail)
-                {
-                    email = txtEmailCreate.Text;
-                    CreateAccount2 c2 = new CreateAccount2();
-                    c2.Show();
-                }
-                else
+                if (!validationEmail)
                 {
                     txtEmailCreate.Text = "";
                     checkEmail.Text = "Invalid Email";
                 }
-            }
-            catch
-            {
 
-            }
+
             
-            
-            
-            
+
+
 
         }
 
