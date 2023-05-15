@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using System.Globalization;
 using System.Windows.Documents;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace BankSystemGui.Repository{
 public class InfoRepository
@@ -38,6 +39,14 @@ public class InfoRepository
 
             results.Close();
             return false;
+        }
+        public bool validateEmail(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+            if (Regex.IsMatch(email, pattern)){
+                return true;
+            }
+            else { return false; }
         }
         
         public void registerAccount(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d,string p)
