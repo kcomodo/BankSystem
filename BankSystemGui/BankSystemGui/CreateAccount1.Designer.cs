@@ -54,6 +54,7 @@
             this.checkEmail = new System.Windows.Forms.Label();
             this.checkPassword = new System.Windows.Forms.Label();
             this.checkUsername = new System.Windows.Forms.Label();
+            this.checkPhoneNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -269,9 +270,8 @@
             this.checkPassword.ForeColor = System.Drawing.Color.Firebrick;
             this.checkPassword.Location = new System.Drawing.Point(223, 90);
             this.checkPassword.Name = "checkPassword";
-            this.checkPassword.Size = new System.Drawing.Size(35, 13);
+            this.checkPassword.Size = new System.Drawing.Size(0, 13);
             this.checkPassword.TabIndex = 33;
-            this.checkPassword.Text = "label6";
             // 
             // checkUsername
             // 
@@ -279,15 +279,24 @@
             this.checkUsername.ForeColor = System.Drawing.Color.Firebrick;
             this.checkUsername.Location = new System.Drawing.Point(223, 64);
             this.checkUsername.Name = "checkUsername";
-            this.checkUsername.Size = new System.Drawing.Size(35, 13);
+            this.checkUsername.Size = new System.Drawing.Size(0, 13);
             this.checkUsername.TabIndex = 34;
-            this.checkUsername.Text = "label9";
+            // 
+            // checkPhoneNumber
+            // 
+            this.checkPhoneNumber.AutoSize = true;
+            this.checkPhoneNumber.ForeColor = System.Drawing.Color.Firebrick;
+            this.checkPhoneNumber.Location = new System.Drawing.Point(226, 173);
+            this.checkPhoneNumber.Name = "checkPhoneNumber";
+            this.checkPhoneNumber.Size = new System.Drawing.Size(0, 13);
+            this.checkPhoneNumber.TabIndex = 35;
             // 
             // CreateAccount1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 507);
+            this.Controls.Add(this.checkPhoneNumber);
             this.Controls.Add(this.checkUsername);
             this.Controls.Add(this.checkPassword);
             this.Controls.Add(this.checkEmail);
@@ -351,5 +360,6 @@
         private System.Windows.Forms.Label checkEmail;
         private System.Windows.Forms.Label checkPassword;
         private System.Windows.Forms.Label checkUsername;
+        private System.Windows.Forms.Label checkPhoneNumber;
     }
 }

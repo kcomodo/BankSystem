@@ -38,6 +38,11 @@ namespace BankSystemGui.Services{
             bool infoPassword =_repo.validatePassword(password);
             return infoPassword;
         }
+        public bool validatePhoneNumber(string phoneNumber)
+        {
+            bool infoPhone = _repo.validatePhoneNumber(phoneNumber);
+            return infoPhone;
+        }
         public void registerAccount(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d, string p)
         {
             _repo.registerAccount(f, l, u, e, s, c, z, a, phone, d,p);

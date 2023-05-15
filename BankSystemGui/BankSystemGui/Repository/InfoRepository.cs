@@ -70,6 +70,11 @@ public class InfoRepository
                 return false;
             }
         }
+        public bool validatePhoneNumber(string phoneNumber)
+        {
+            string pattern = @"^\d{10}$";
+            return Regex.IsMatch(phoneNumber, pattern);
+        }
         public void registerAccount(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d,string p)
         {
             var statement = "INSERT INTO bank_client(clientFirstName, clientLastName, clientUserName, clientEmail, clientState, clientCity, clientZipCode, clientAddress," +
