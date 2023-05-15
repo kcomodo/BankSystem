@@ -50,6 +50,11 @@ namespace BankSystemGui
                     CreateAccount2 c2 = new CreateAccount2();
                     c2.Show();
                 }
+                else
+                {
+                    txtEmailCreate.Text = "";
+                    checkEmail.Text = "Invalid Email";
+                }
             }
             catch
             {
@@ -73,7 +78,19 @@ namespace BankSystemGui
             lastName = txtLastNameCreate.Text;
             userName = txtUserCreate.Text;
             password = txtPassCreate.Text;
-            email = txtEmailCreate.Text;
+            bool validation = bank.validateEmail(txtEmailCreate.Text);
+            if (validation)
+            {
+                email = txtEmailCreate.Text;
+                CreateAccount2 c2 = new CreateAccount2();
+                c2.Show();
+            }
+            else
+            {
+                txtEmailCreate.Text = "";
+                checkEmail.Text = "Invalid Email";
+            }
+           
             phonenumber = txtPhoneNumberCreate.Text;
             dateOfBirth = dateEdit.Value;
 
@@ -89,6 +106,11 @@ namespace BankSystemGui
         private void txtPassCreate_TextChanged(object sender, EventArgs e)
         {
             txtPassCreate.PasswordChar = '*';
+        }
+
+        private void CreateAccount1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

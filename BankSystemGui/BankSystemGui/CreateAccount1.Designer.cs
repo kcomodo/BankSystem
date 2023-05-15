@@ -51,6 +51,7 @@
             this.testEmail = new System.Windows.Forms.Label();
             this.testPhone = new System.Windows.Forms.Label();
             this.testDate = new System.Windows.Forms.Label();
+            this.checkEmail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -251,11 +252,21 @@
             this.testDate.TabIndex = 31;
             this.testDate.Text = "label14";
             // 
+            // checkEmail
+            // 
+            this.checkEmail.AutoSize = true;
+            this.checkEmail.ForeColor = System.Drawing.Color.Firebrick;
+            this.checkEmail.Location = new System.Drawing.Point(223, 123);
+            this.checkEmail.Name = "checkEmail";
+            this.checkEmail.Size = new System.Drawing.Size(0, 13);
+            this.checkEmail.TabIndex = 32;
+            // 
             // CreateAccount1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 507);
+            this.Controls.Add(this.checkEmail);
             this.Controls.Add(this.testDate);
             this.Controls.Add(this.testPhone);
             this.Controls.Add(this.testEmail);
@@ -282,6 +293,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateAccount1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.CreateAccount1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +324,6 @@
         private System.Windows.Forms.Label testEmail;
         private System.Windows.Forms.Label testPhone;
         private System.Windows.Forms.Label testDate;
+        private System.Windows.Forms.Label checkEmail;
     }
 }
