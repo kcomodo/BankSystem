@@ -52,6 +52,8 @@
             this.testPhone = new System.Windows.Forms.Label();
             this.testDate = new System.Windows.Forms.Label();
             this.checkEmail = new System.Windows.Forms.Label();
+            this.checkPassword = new System.Windows.Forms.Label();
+            this.checkUsername = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -261,11 +263,31 @@
             this.checkEmail.Size = new System.Drawing.Size(0, 13);
             this.checkEmail.TabIndex = 32;
             // 
+            // checkPassword
+            // 
+            this.checkPassword.AutoSize = true;
+            this.checkPassword.Location = new System.Drawing.Point(223, 90);
+            this.checkPassword.Name = "checkPassword";
+            this.checkPassword.Size = new System.Drawing.Size(35, 13);
+            this.checkPassword.TabIndex = 33;
+            this.checkPassword.Text = "label6";
+            // 
+            // checkUsername
+            // 
+            this.checkUsername.AutoSize = true;
+            this.checkUsername.Location = new System.Drawing.Point(223, 64);
+            this.checkUsername.Name = "checkUsername";
+            this.checkUsername.Size = new System.Drawing.Size(35, 13);
+            this.checkUsername.TabIndex = 34;
+            this.checkUsername.Text = "label9";
+            // 
             // CreateAccount1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 507);
+            this.Controls.Add(this.checkUsername);
+            this.Controls.Add(this.checkPassword);
             this.Controls.Add(this.checkEmail);
             this.Controls.Add(this.testDate);
             this.Controls.Add(this.testPhone);
@@ -325,5 +347,7 @@
         private System.Windows.Forms.Label testPhone;
         private System.Windows.Forms.Label testDate;
         private System.Windows.Forms.Label checkEmail;
+        private System.Windows.Forms.Label checkPassword;
+        private System.Windows.Forms.Label checkUsername;
     }
 }

@@ -28,6 +28,16 @@ namespace BankSystemGui.Services{
             bool infoEmail = _repo.validateEmail(email);
             return infoEmail;
         }
+        public bool validateUserName(string username)
+        {
+            bool infoUserName = _repo.validateUserName(username);
+            return infoUserName;
+        }
+        public bool validatePassword(string password)
+        {
+            bool infoPassword =_repo.validatePassword(password);
+            return infoPassword;
+        }
         public void registerAccount(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d, string p)
         {
             _repo.registerAccount(f, l, u, e, s, c, z, a, phone, d,p);

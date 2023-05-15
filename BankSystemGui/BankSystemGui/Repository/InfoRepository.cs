@@ -48,7 +48,28 @@ public class InfoRepository
             }
             else { return false; }
         }
-        
+        public bool validateUserName(string username)
+        {
+            if(username.Length >= 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool validatePassword(string password)
+        {
+            if(password.Length >= 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public void registerAccount(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d,string p)
         {
             var statement = "INSERT INTO bank_client(clientFirstName, clientLastName, clientUserName, clientEmail, clientState, clientCity, clientZipCode, clientAddress," +
