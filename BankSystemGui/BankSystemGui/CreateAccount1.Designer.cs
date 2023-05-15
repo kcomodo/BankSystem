@@ -266,6 +266,7 @@
             // checkPassword
             // 
             this.checkPassword.AutoSize = true;
+            this.checkPassword.ForeColor = System.Drawing.Color.Firebrick;
             this.checkPassword.Location = new System.Drawing.Point(223, 90);
             this.checkPassword.Name = "checkPassword";
             this.checkPassword.Size = new System.Drawing.Size(35, 13);
@@ -275,6 +276,7 @@
             // checkUsername
             // 
             this.checkUsername.AutoSize = true;
+            this.checkUsername.ForeColor = System.Drawing.Color.Firebrick;
             this.checkUsername.Location = new System.Drawing.Point(223, 64);
             this.checkUsername.Name = "checkUsername";
             this.checkUsername.Size = new System.Drawing.Size(35, 13);
