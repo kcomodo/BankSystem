@@ -32,13 +32,13 @@ namespace BankSystemDataControl.Services
             List<InfoModel> newList = _repo.ReturnLogin().ToList<InfoModel>();
             return newList;
         }
-        /*
+        
         public bool ValidateLogin(string username, string password)
         {
             bool infoNames = _repo.ValidateLogin(username, password);
             return infoNames;
         }
-        */
+        
 
     }
 }

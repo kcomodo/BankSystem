@@ -83,7 +83,7 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return newList;
         }
-        /*
+        
         public bool ValidateLogin(string username, string password)
         {
             var statement = "Select clientUserName, clientPassword from bank_client";
@@ -102,7 +102,7 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return false;
         }
-        */
+        
 
 
     }

@@ -6,6 +6,6 @@ namespace BankSystemDataControl.Services
     {
         public List<InfoModel> ReturnAll();
         public List<InfoModel> ReturnLogin();
-        //public bool ValidateLogin(string username, string password);
+        public bool ValidateLogin(string username, string password);
     }
 }
