@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -39,10 +40,11 @@ namespace BankSystemGui
             {
                 firstName = txtFirstNameCreate.Text;
                 lastName = txtLastNameCreate.Text;
-               
+                dateOfBirth = dateEdit.Value;
                 bool validationUserName = bank.validateUserName(txtUserCreate.Text);
                 bool validationPassword = bank.validatePassword(txtPassCreate.Text);
                 bool validationEmail = bank.validateEmail(txtEmailCreate.Text);
+                bool validationPhone = bank.validatePhoneNumber(txtPhoneNumberCreate.Text);
                 if(validationUserName)
                 {
                     userName = txtUserCreate.Text;
@@ -63,10 +65,30 @@ namespace BankSystemGui
                     txtPassCreate.Text = "";
                     checkPassword.Text = "Invalid Password";
                 }
+                if (validationPhone)
+                {
+                    phonenumber = txtPhoneNumberCreate.Text;
+                    string cleanPhoneNumber = Regex.Replace(phonenumber, @"[^0-9]", "");
+                    if (cleanPhoneNumber.Length > 3)
+                    {
+                        cleanPhoneNumber = cleanPhoneNumber.Insert(3, "-");
+                    }
+                    if (cleanPhoneNumber.Length > 7)
+                    {
+                        cleanPhoneNumber = cleanPhoneNumber.Insert(7, "-");
+                    }
+                    phonenumber = cleanPhoneNumber;
 
-                phonenumber = txtPhoneNumberCreate.Text;
-                dateOfBirth = dateEdit.Value;
-                
+
+                }
+                else
+                {
+                    txtPassCreate.Text = "";
+                    checkPassword.Text = "Invalid Phone Number";
+                }
+
+
+
                 if (validationEmail)
                 {
                     email = txtEmailCreate.Text;
