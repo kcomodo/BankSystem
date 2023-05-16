@@ -102,6 +102,18 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return false;
         }
+        public string userInformation(string username)
+        {
+            var statement = "Select * from bank_client where clientUserName=@newUserName";
+            var command = new MySqlCommand(statement, _connection);
+            command.Parameters.AddWithValue("username", username);
+            var results = command.ExecuteReader();
+            List<InfoModel> newList = new List<InfoModel>();
+            while(results.Read())
+            {
+               InfoModel i = new InfoModel();
+            }
+        }
         
 
 
