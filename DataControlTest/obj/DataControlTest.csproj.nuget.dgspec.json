@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyProjects\\banksystem\\DataControlTest\\DataControlTest.csproj": {}
+    "D:\\MyProjects\\BankSystem\\DataControlTest\\DataControlTest.csproj": {}
   },
   "projects": {
-    "D:\\MyProjects\\banksystem\\BankSystemDataControl\\BankSystemDataControl.csproj": {
+    "D:\\MyProjects\\BankSystem\\BankSystemDataControl\\BankSystemDataControl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\banksystem\\BankSystemDataControl\\BankSystemDataControl.csproj",
+        "projectUniqueName": "D:\\MyProjects\\BankSystem\\BankSystemDataControl\\BankSystemDataControl.csproj",
         "projectName": "BankSystemDataControl",
-        "projectPath": "D:\\MyProjects\\banksystem\\BankSystemDataControl\\BankSystemDataControl.csproj",
+        "projectPath": "D:\\MyProjects\\BankSystem\\BankSystemDataControl\\BankSystemDataControl.csproj",
         "packagesPath": "C:\\Users\\Quang Ho\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\banksystem\\BankSystemDataControl\\obj\\",
+        "outputPath": "D:\\MyProjects\\BankSystem\\BankSystemDataControl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -79,14 +79,14 @@
         }
       }
     },
-    "D:\\MyProjects\\banksystem\\DataControlTest\\DataControlTest.csproj": {
+    "D:\\MyProjects\\BankSystem\\DataControlTest\\DataControlTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\banksystem\\DataControlTest\\DataControlTest.csproj",
+        "projectUniqueName": "D:\\MyProjects\\BankSystem\\DataControlTest\\DataControlTest.csproj",
         "projectName": "DataControlTest",
-        "projectPath": "D:\\MyProjects\\banksystem\\DataControlTest\\DataControlTest.csproj",
+        "projectPath": "D:\\MyProjects\\BankSystem\\DataControlTest\\DataControlTest.csproj",
         "packagesPath": "C:\\Users\\Quang Ho\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\banksystem\\DataControlTest\\obj\\",
+        "outputPath": "D:\\MyProjects\\BankSystem\\DataControlTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -106,8 +106,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\MyProjects\\banksystem\\BankSystemDataControl\\BankSystemDataControl.csproj": {
-                "projectPath": "D:\\MyProjects\\banksystem\\BankSystemDataControl\\BankSystemDataControl.csproj"
+              "D:\\MyProjects\\BankSystem\\BankSystemDataControl\\BankSystemDataControl.csproj": {
+                "projectPath": "D:\\MyProjects\\BankSystem\\BankSystemDataControl\\BankSystemDataControl.csproj"
               }
             }
           }

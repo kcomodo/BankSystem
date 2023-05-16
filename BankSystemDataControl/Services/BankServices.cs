@@ -24,7 +24,12 @@ namespace BankSystemDataControl.Services
         public List<InfoModel> ReturnAll()
         {
             List<InfoModel> newList = _repo.ReturnAll().ToList<InfoModel>();
-            return newList;
+            if(newList != null)
+            {
+                return newList;
+            }
+            return null;
+            
         }
         
         public List<InfoModel> ReturnLogin()
