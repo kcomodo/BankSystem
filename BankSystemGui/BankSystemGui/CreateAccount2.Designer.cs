@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtStateCreate = new System.Windows.Forms.TextBox();
             this.txtCityCreate = new System.Windows.Forms.TextBox();
             this.txtZipCreate = new System.Windows.Forms.TextBox();
             this.txtAddressCreate = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.checkButton = new System.Windows.Forms.Button();
+            this.stateCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -86,14 +86,6 @@
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Address:";
-            // 
-            // txtStateCreate
-            // 
-            this.txtStateCreate.Location = new System.Drawing.Point(111, 21);
-            this.txtStateCreate.Name = "txtStateCreate";
-            this.txtStateCreate.Size = new System.Drawing.Size(100, 20);
-            this.txtStateCreate.TabIndex = 4;
-            this.txtStateCreate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtCityCreate
             // 
@@ -165,7 +157,7 @@
             // lblFirst
             // 
             this.lblFirst.AutoSize = true;
-            this.lblFirst.Location = new System.Drawing.Point(341, 27);
+            this.lblFirst.Location = new System.Drawing.Point(347, 27);
             this.lblFirst.Name = "lblFirst";
             this.lblFirst.Size = new System.Drawing.Size(35, 13);
             this.lblFirst.TabIndex = 13;
@@ -235,11 +227,21 @@
             this.checkButton.UseVisualStyleBackColor = true;
             this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
             // 
+            // stateCombo
+            // 
+            this.stateCombo.FormattingEnabled = true;
+            this.stateCombo.Location = new System.Drawing.Point(111, 21);
+            this.stateCombo.Name = "stateCombo";
+            this.stateCombo.Size = new System.Drawing.Size(121, 21);
+            this.stateCombo.TabIndex = 21;
+            this.stateCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // CreateAccount2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.stateCombo);
             this.Controls.Add(this.checkButton);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblPhone);
@@ -256,7 +258,6 @@
             this.Controls.Add(this.txtAddressCreate);
             this.Controls.Add(this.txtZipCreate);
             this.Controls.Add(this.txtCityCreate);
-            this.Controls.Add(this.txtStateCreate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -275,7 +276,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtStateCreate;
         private System.Windows.Forms.TextBox txtCityCreate;
         private System.Windows.Forms.TextBox txtZipCreate;
         private System.Windows.Forms.TextBox txtAddressCreate;
@@ -292,5 +292,6 @@
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button checkButton;
+        private System.Windows.Forms.ComboBox stateCombo;
     }
 }
