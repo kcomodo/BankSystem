@@ -60,6 +60,8 @@ namespace BankSystemGui
             userName = CreateAccount1.userName;
             password = CreateAccount1.password;
             phonenumber = CreateAccount1.phonenumber;
+            DateTime dateUpdate = CreateAccount1.dateOfBirth;
+            lblDate.Text = dateUpdate.ToString("M/d/yyyy h:mm:ss tt");
             state = stateCombo.SelectedIndex.ToString();
             city = txtCityCreate.Text;
             zip = Int32.Parse(txtZipCreate.Text);
@@ -87,7 +89,7 @@ namespace BankSystemGui
             lblEmail.Text = CreateAccount1.email;
             lblPhone.Text = CreateAccount1.phonenumber;
             DateTime dateUpdate = CreateAccount1.dateOfBirth;
-            lblDate.Text = dateUpdate.ToString("M/d/yyyy");
+            lblDate.Text = dateUpdate.ToString("M/d/yyyy h:mm:ss tt");
             lblState.Text = state;
             lblCity.Text = city;
             lblZip.Text = zip.ToString();
