@@ -32,7 +32,26 @@ public class BankSystemController : ControllerBase
             }
         }catch(Exception e)
         {
-            return StatusCode(500, "Internal Server Errror");
+            return StatusCode(500, "Internal Server Error");
+        }
+    }
+    [HttpGet("/Logins")]
+    public IActionResult getLogins()
+    {
+        try
+        {
+            IEnumerable<InfoModel> list = _bankServices.ReturnLogin();
+            if (list != null)
+            {
+                return Ok(list);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }catch(Exception e)
+        {
+            return StatusCode(500, "Internal Server Error");
         }
     }
 
