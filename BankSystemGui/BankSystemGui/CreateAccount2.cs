@@ -12,6 +12,7 @@ using BankSystemGui.Repository;
 using BankSystemGui.Services;
 using BankSystemGui.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Windows.Forms.VisualStyles;
 
 namespace BankSystemGui
 {
@@ -32,6 +33,17 @@ namespace BankSystemGui
         public CreateAccount2()
         {
             InitializeComponent();
+            string[] states = {
+        "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
+        "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
+        "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri",
+        "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina",
+        "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+        "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia",
+                    "Wisconsin", "Wyoming"
+                };
+
+            stateCombo.Items.AddRange(states);
         }
           
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -48,7 +60,7 @@ namespace BankSystemGui
             userName = CreateAccount1.userName;
             password = CreateAccount1.password;
             phonenumber = CreateAccount1.phonenumber;
-            state = txtStateCreate.Text;
+            state = stateCombo.SelectedIndex.ToString();
             city = txtCityCreate.Text;
             zip = Int32.Parse(txtZipCreate.Text);
             address = txtAddressCreate.Text;
@@ -63,7 +75,7 @@ namespace BankSystemGui
 
         private void checkButton_Click(object sender, EventArgs e)
         {
-            state = txtStateCreate.Text;
+            state = stateCombo.SelectedItem.ToString();
             city = txtCityCreate.Text;
             zip = Int32.Parse(txtZipCreate.Text);
             address = txtAddressCreate.Text;
@@ -80,6 +92,12 @@ namespace BankSystemGui
             lblCity.Text = city;
             lblZip.Text = zip.ToString();
             lblAddress.Text = address;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+              
+
         }
     }
 }
