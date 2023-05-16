@@ -65,7 +65,7 @@ namespace BankSystemGui
                     testPass.Text = password;
                     testEmail.Text = email;
                     testPhone.Text = phonenumber;
-                    testDate.Text = dateEdit.Value.ToString("M/d/yyyy");
+                    testDate.Text = dateEdit.Value.ToString("M/d/yyyy h:mm:ss tt");
                 this.Hide();
                 CreateAccount2 c2 = new CreateAccount2();
                 c2.Show();
@@ -139,7 +139,7 @@ namespace BankSystemGui
                 testPass.Text = password;
                 testEmail.Text = email;
                 testPhone.Text = phonenumber;
-                testDate.Text = dateEdit.Value.ToString("M/d/yyyy");
+                testDate.Text = dateEdit.Value.ToString("M/d/yyyy h:mm:ss tt");
   
             }
             if(!validationPassword)
