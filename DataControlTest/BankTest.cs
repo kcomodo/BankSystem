@@ -32,4 +32,19 @@ public class UnitTest1
             // Assert
             Assert.False(result);
     }
+   [Fact]
+   public void checkInfo_NotEmpty(){
+    _infoRepository = new InfoRepository();
+    List<InfoModel> newList = _infoRepository.ReturnAll().ToList<InfoModel>();
+    Assert.NotEmpty(newList);
+
+   }
+   [Fact]
+   public void checkInfo_Empty(){
+    _infoRepository = new InfoRepository();
+    List<InfoModel> newList = _infoRepository.ReturnAll().ToList<InfoModel>();
+    Assert.Empty(newList);
+
+   }
+    
 }
