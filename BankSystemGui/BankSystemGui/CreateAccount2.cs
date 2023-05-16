@@ -24,7 +24,6 @@ namespace BankSystemGui
         public static string userName;
         public static string password;
         public static string phonenumber;
-        public static DateTime dateOfBirth;
         public static string state;
         public static string city;
         public static int zip;
@@ -66,7 +65,7 @@ namespace BankSystemGui
             city = txtCityCreate.Text;
             zip = Int32.Parse(txtZipCreate.Text);
             address = txtAddressCreate.Text;
-            bank.registerAccount(firstName, lastName, userName, email, state, city, zip, address, phonenumber, dateOfBirth, password);
+            bank.registerAccount(firstName, lastName, userName, email, state, city, zip, address, phonenumber, dateUpdate, password);
             
             this.Hide();
             Login l = new Login();
