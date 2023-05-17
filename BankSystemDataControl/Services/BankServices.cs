@@ -49,6 +49,10 @@ namespace BankSystemDataControl.Services
             return newList;
 
         }
+        public void DeleteUserInfo(string username)
+        {
+            _repo.DeleteUserInfo(username);
+        }
 
 
 
