@@ -133,6 +133,7 @@
             // exitBtn
             // 
             this.exitBtn.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.exitBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitBtn.BackgroundImage")));
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.exitBtn.IconColor = System.Drawing.Color.Black;
