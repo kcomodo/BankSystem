@@ -74,6 +74,10 @@ public class BankSystemController : ControllerBase
             return StatusCode(500, "Internal Server Error");
         }
     }
-
+    [HttpDelete("{username}")]
+    public IActionResult deleteUserInfo(string username) {
+        _infoRepository.DeleteUserInfo(username);
+        return NoContent();
+    }
   
 }

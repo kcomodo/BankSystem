@@ -8,5 +8,6 @@ namespace BankSystemDataControl.Services
         public List<InfoModel> ReturnLogin();
         public bool ValidateLogin(string username, string password);
         public List<InfoModel> userInformation(string username);
+        public void DeleteUserInfo(string username);
     }
 }
