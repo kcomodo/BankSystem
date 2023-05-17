@@ -127,44 +127,17 @@ namespace BankSystemDataControl.Repository
                     Password = (string)results[11]
                 };
                 newList.Add(i);
-                
+               
             }
+            results.Close();
             return newList;
         }
         public void DeleteUserInfo(string username)
         {
-            var statement = "Select * from bank_client";
-            var command = new MySqlCommand(statement, _connection);
-            var results = command.ExecuteReader();
-            List<InfoModel> newList = new List<InfoModel>();
-            while (results.Read())
-            {
-                InfoModel i = new InfoModel
-                {
-                    ID = (int)results[0],
-                    FirstName = (string)results[1],
-                    LastName = (string)results[2],
-                    UserName = (string)results[3],
-                    Email = (string)results[4],
-                    State = (string)results[5],
-                    City = (string)results[6],
-                    ZipCode = (int)results[7],
-                    Address = (string)results[8],
-                    PhoneNumber = (string)results[9],
-                    DateOfBirth = DateTime.ParseExact(results.GetString(10), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture),
-                    Password = (string)results[11]
-                };
-                newList.Add(i);
-            }
-            results.Close();
-            foreach(InfoModel i in newList)
-            {
-                if(i.UserName.Equals(username))
-                {
-                    newList.Remove(i);
-                    return;
-                }
-            }
+                var statement = "DELETE FROM bank_client WHERE clientUserName=@Username";
+                var command = new MySqlCommand(statement, _connection);
+                command.Parameters.AddWithValue("@Username", username);
+                command.ExecuteNonQuery();
         }
         
 

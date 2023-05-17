@@ -75,9 +75,10 @@ public class BankSystemController : ControllerBase
         }
     }
     [HttpDelete("{username}")]
-    public IActionResult deleteUserInfo(string username) {
-        _infoRepository.DeleteUserInfo(username);
+    public IActionResult DeleteUserInfo(string username) {
+        _bankServices.DeleteUserInfo(username);
         return NoContent();
+        
     }
   
 }
