@@ -43,7 +43,14 @@ namespace BankSystemDataControl.Services
             bool infoNames = _repo.ValidateLogin(username, password);
             return infoNames;
         }
-        
+        public List<InfoModel> userInformation(string username)
+        {
+          List<InfoModel> newList = _repo.userInformation(username).ToList<InfoModel>();
+            return newList;
+
+        }
+
+
 
     }
 }
