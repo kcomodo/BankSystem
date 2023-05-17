@@ -26,6 +26,7 @@ namespace BankSystemGui
         public static string phonenumber;
         public static string state;
         public static string city;
+        public static string Date;
         public static int zip;
         public static string address;
 
@@ -60,13 +61,11 @@ namespace BankSystemGui
             password = CreateAccount1.password;
             phonenumber = CreateAccount1.phonenumber;
             DateTime dateUpdate = CreateAccount1.dateOfBirth;
-            lblDate.Text = dateUpdate.ToString("M/d/yyyy h:mm:ss tt");
             state = stateCombo.SelectedIndex.ToString();
             city = txtCityCreate.Text;
             zip = Int32.Parse(txtZipCreate.Text);
             address = txtAddressCreate.Text;
             bank.registerAccount(firstName, lastName, userName, email, state, city, zip, address, phonenumber, dateUpdate, password);
-            
             this.Hide();
             Login l = new Login();
             l.Show();
@@ -74,27 +73,7 @@ namespace BankSystemGui
             
         }
 
-        private void checkButton_Click(object sender, EventArgs e)
-        {
-            state = stateCombo.SelectedItem.ToString();
-            city = txtCityCreate.Text;
-            zip = Int32.Parse(txtZipCreate.Text);
-            address = txtAddressCreate.Text;
-
-            lblFirst.Text = CreateAccount1.firstName;
-            lblLast.Text = CreateAccount1.lastName;
-            lblUser.Text = CreateAccount1.userName;
-            lblPass.Text = CreateAccount1.password;
-            lblEmail.Text = CreateAccount1.email;
-            lblPhone.Text = CreateAccount1.phonenumber;
-            DateTime dateUpdate = CreateAccount1.dateOfBirth;
-            lblDate.Text = dateUpdate.ToString("M/d/yyyy h:mm:ss tt");
-            lblState.Text = state;
-            lblCity.Text = city;
-            lblZip.Text = zip.ToString();
-            lblAddress.Text = address;
-        }
-
+      
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
               
