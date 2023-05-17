@@ -35,8 +35,8 @@
             this.displayIncorrect = new System.Windows.Forms.Label();
             this.btnSignup = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.exitBtn = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.SlateGray;
             this.btnLogin.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(91, 235);
+            this.btnLogin.Location = new System.Drawing.Point(91, 236);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(203, 52);
             this.btnLogin.TabIndex = 2;
@@ -115,18 +115,6 @@
             this.iconPictureBox1.TabIndex = 7;
             this.iconPictureBox1.TabStop = false;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(253, 112);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(8, 8);
-            this.iconButton1.TabIndex = 8;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
             // iconPictureBox2
             // 
             this.iconPictureBox2.BackColor = System.Drawing.Color.SlateGray;
@@ -142,6 +130,21 @@
             this.iconPictureBox2.TabIndex = 9;
             this.iconPictureBox2.TabStop = false;
             // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.exitBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitBtn.BackgroundImage")));
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.exitBtn.IconColor = System.Drawing.Color.Black;
+            this.exitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.exitBtn.Location = new System.Drawing.Point(360, 0);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(43, 36);
+            this.exitBtn.TabIndex = 10;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,8 +152,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(403, 476);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.iconPictureBox2);
-            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.displayIncorrect);
@@ -175,8 +178,8 @@
         private System.Windows.Forms.Label displayIncorrect;
         private System.Windows.Forms.Button btnSignup;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconButton exitBtn;
     }
 }
 

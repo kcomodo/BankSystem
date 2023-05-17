@@ -38,8 +38,8 @@
             this.profileButton = new FontAwesome.Sharp.IconButton();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.middlePanel = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
+            this.middlePanel = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -185,14 +185,6 @@
             this.topPanel.Size = new System.Drawing.Size(670, 84);
             this.topPanel.TabIndex = 8;
             // 
-            // middlePanel
-            // 
-            this.middlePanel.Location = new System.Drawing.Point(139, 84);
-            this.middlePanel.Name = "middlePanel";
-            this.middlePanel.Size = new System.Drawing.Size(658, 309);
-            this.middlePanel.TabIndex = 9;
-            this.middlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.middlePanel_Paint);
-            // 
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -201,6 +193,14 @@
             this.labelName.Size = new System.Drawing.Size(35, 13);
             this.labelName.TabIndex = 0;
             this.labelName.Text = "label1";
+            // 
+            // middlePanel
+            // 
+            this.middlePanel.Location = new System.Drawing.Point(139, 84);
+            this.middlePanel.Name = "middlePanel";
+            this.middlePanel.Size = new System.Drawing.Size(658, 309);
+            this.middlePanel.TabIndex = 9;
+            this.middlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.middlePanel_Paint);
             // 
             // Home
             // 
