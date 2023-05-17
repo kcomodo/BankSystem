@@ -40,3 +40,4 @@ D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\System.Memory.xml
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\System.Numerics.Vectors.xml
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\MyProjects\BankSystem\BankSystemGui\BankSystemGui\obj\Debug\BankSystemGui.Template.resources
