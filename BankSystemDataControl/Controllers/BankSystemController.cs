@@ -54,6 +54,26 @@ public class BankSystemController : ControllerBase
             return StatusCode(500, "Internal Server Error");
         }
     }
+    [HttpGet("/UserInfo")]
+    public IActionResult getUserInfo(string username)
+    {
+        try
+        {
+            IEnumerable<InfoModel> list = _bankServices.userInformation(username);
+            if(list != null)
+            {
+                return Ok(list);
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+        }catch(Exception e)
+        {
+            return StatusCode(500, "Internal Server Error");
+        }
+    }
 
   
 }
