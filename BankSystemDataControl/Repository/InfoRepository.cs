@@ -106,7 +106,7 @@ namespace BankSystemDataControl.Repository
         {
             var statement = "Select * from bank_client where clientUserName=@newUserName";
             var command = new MySqlCommand(statement, _connection);
-            command.Parameters.AddWithValue("username", username);
+            command.Parameters.AddWithValue("@newUserName", username);
             var results = command.ExecuteReader();
             List<InfoModel> newList = new List<InfoModel>();
             while (results.Read())

@@ -54,7 +54,7 @@ public class BankSystemController : ControllerBase
             return StatusCode(500, "Internal Server Error");
         }
     }
-    [HttpGet("/UserInfo")]
+    [HttpGet("{username}")]
     public IActionResult getUserInfo(string username)
     {
         try
