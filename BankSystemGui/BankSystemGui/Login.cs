@@ -33,6 +33,13 @@ namespace BankSystemGui
             txtPassword.ForeColor = System.Drawing.Color.Gray;
             txtPassword.GotFocus += txtPassword_GotFocus;
             txtPassword.LostFocus+= txtPassword_LostFocus;
+
+
+            exitBtn.BackColor = Color.Transparent;
+            exitBtn.MouseEnter += button1_MouseEnter;
+            exitBtn.MouseLeave += button1_MouseLeave;
+            
+            exitBtn.FlatAppearance.BorderSize = 0;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -126,12 +133,29 @@ namespace BankSystemGui
                 txtPassword.ForeColor = System.Drawing.Color.Gray;
             }
         }
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            exitBtn.BackColor = Color.Transparent;
+            
+            exitBtn.FlatAppearance.BorderSize = 0;
+        }
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            exitBtn.BackColor = Color.Transparent; // Set the desired background color when not hovered over
+            
+            exitBtn.FlatAppearance.BorderSize = 0;
+        }
         public static bool ValidateLogin(string username, string password)
         {
             InfoRepository program = new InfoRepository();
             BankServices bank = new BankServices();
             bool validation = bank.ValidateLogin(username, password);
             return validation;
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
