@@ -58,14 +58,6 @@ namespace BankSystemGui
                     }
                     email = txtEmailCreate.Text;
                     dateOfBirth = dateEdit.Value;
-
-                    testFirst.Text = firstName;
-                    testLast.Text = lastName;
-                    testUser.Text = userName;
-                    testPass.Text = password;
-                    testEmail.Text = email;
-                    testPhone.Text = phonenumber;
-                    testDate.Text = dateEdit.Value.ToString("M/d/yyyy h:mm:ss tt");
                 this.Hide();
                 CreateAccount2 c2 = new CreateAccount2();
                 c2.Show();
@@ -106,67 +98,7 @@ namespace BankSystemGui
 
         }
 
-        private void checkButton_Click(object sender, EventArgs e)
-        {
-            firstName = txtFirstNameCreate.Text;
-            lastName = txtLastNameCreate.Text;
-            userName = txtUserCreate.Text;
-            password = txtPassCreate.Text;
-            bool validationUserName = bank.validateUserName(txtUserCreate.Text);
-            bool validationPassword = bank.validatePassword(txtPassCreate.Text);
-            bool validationEmail = bank.validateEmail(txtEmailCreate.Text);
-            bool validationPhone = bank.validatePhoneNumber(txtPhoneNumberCreate.Text);
-            if (validationUserName && validationPassword && validationEmail & validationPhone)
-            {
-                userName = txtUserCreate.Text;
-                password = txtPassCreate.Text;
-
-                phonenumber = Regex.Replace(txtPhoneNumberCreate.Text, @"[^0-9]", "");
-                if (phonenumber.Length > 3)
-                {
-                    phonenumber = phonenumber.Insert(3, "-");
-                }
-                if (phonenumber.Length > 7)
-                {
-                    phonenumber = phonenumber.Insert(7, "-");
-                }
-                email = txtEmailCreate.Text;
-                dateOfBirth = dateEdit.Value;
-
-                testFirst.Text = firstName;
-                testLast.Text = lastName;
-                testUser.Text = userName;
-                testPass.Text = password;
-                testEmail.Text = email;
-                testPhone.Text = phonenumber;
-                testDate.Text = dateEdit.Value.ToString("M/d/yyyy h:mm:ss tt");
-  
-            }
-            if(!validationPassword)
-            {
-                txtUserCreate.Text = "";
-                checkUsername.Text = "Invalid Username";
-            }
-            if (!validationPassword)
-            {
-                txtPassCreate.Text = "";
-                checkPassword.Text = "Invalid Password";
-
-            }
-            if (!validationPhone)
-            {
-                txtPhoneNumberCreate.Text = "";
-                checkPhoneNumber.Text = "Invalid Phone Number";
-            }
-
-            if (!validationEmail)
-            {
-                txtEmailCreate.Text = "";
-                checkEmail.Text = "Invalid Email";
-            }
-           
-           
-        }
+        
 
         private void txtPassCreate_TextChanged(object sender, EventArgs e)
         {

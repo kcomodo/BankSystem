@@ -43,14 +43,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtPhoneNumberCreate = new System.Windows.Forms.TextBox();
             this.dateEdit = new System.Windows.Forms.DateTimePicker();
-            this.checkButton = new System.Windows.Forms.Button();
-            this.testFirst = new System.Windows.Forms.Label();
-            this.testLast = new System.Windows.Forms.Label();
-            this.testUser = new System.Windows.Forms.Label();
-            this.testPass = new System.Windows.Forms.Label();
-            this.testEmail = new System.Windows.Forms.Label();
-            this.testPhone = new System.Windows.Forms.Label();
-            this.testDate = new System.Windows.Forms.Label();
             this.checkEmail = new System.Windows.Forms.Label();
             this.checkPassword = new System.Windows.Forms.Label();
             this.checkUsername = new System.Windows.Forms.Label();
@@ -182,79 +174,6 @@
             this.dateEdit.Size = new System.Drawing.Size(200, 20);
             this.dateEdit.TabIndex = 23;
             // 
-            // checkButton
-            // 
-            this.checkButton.Location = new System.Drawing.Point(592, 363);
-            this.checkButton.Name = "checkButton";
-            this.checkButton.Size = new System.Drawing.Size(75, 23);
-            this.checkButton.TabIndex = 24;
-            this.checkButton.Text = "Check";
-            this.checkButton.UseVisualStyleBackColor = true;
-            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
-            // 
-            // testFirst
-            // 
-            this.testFirst.AutoSize = true;
-            this.testFirst.Location = new System.Drawing.Point(629, 90);
-            this.testFirst.Name = "testFirst";
-            this.testFirst.Size = new System.Drawing.Size(35, 13);
-            this.testFirst.TabIndex = 25;
-            this.testFirst.Text = "label6";
-            // 
-            // testLast
-            // 
-            this.testLast.AutoSize = true;
-            this.testLast.Location = new System.Drawing.Point(629, 123);
-            this.testLast.Name = "testLast";
-            this.testLast.Size = new System.Drawing.Size(35, 13);
-            this.testLast.TabIndex = 26;
-            this.testLast.Text = "label9";
-            // 
-            // testUser
-            // 
-            this.testUser.AutoSize = true;
-            this.testUser.Location = new System.Drawing.Point(623, 152);
-            this.testUser.Name = "testUser";
-            this.testUser.Size = new System.Drawing.Size(41, 13);
-            this.testUser.TabIndex = 27;
-            this.testUser.Text = "label10";
-            // 
-            // testPass
-            // 
-            this.testPass.AutoSize = true;
-            this.testPass.Location = new System.Drawing.Point(626, 180);
-            this.testPass.Name = "testPass";
-            this.testPass.Size = new System.Drawing.Size(41, 13);
-            this.testPass.TabIndex = 28;
-            this.testPass.Text = "label11";
-            // 
-            // testEmail
-            // 
-            this.testEmail.AutoSize = true;
-            this.testEmail.Location = new System.Drawing.Point(623, 206);
-            this.testEmail.Name = "testEmail";
-            this.testEmail.Size = new System.Drawing.Size(41, 13);
-            this.testEmail.TabIndex = 29;
-            this.testEmail.Text = "label12";
-            // 
-            // testPhone
-            // 
-            this.testPhone.AutoSize = true;
-            this.testPhone.Location = new System.Drawing.Point(626, 239);
-            this.testPhone.Name = "testPhone";
-            this.testPhone.Size = new System.Drawing.Size(41, 13);
-            this.testPhone.TabIndex = 30;
-            this.testPhone.Text = "label13";
-            // 
-            // testDate
-            // 
-            this.testDate.AutoSize = true;
-            this.testDate.Location = new System.Drawing.Point(626, 269);
-            this.testDate.Name = "testDate";
-            this.testDate.Size = new System.Drawing.Size(41, 13);
-            this.testDate.TabIndex = 31;
-            this.testDate.Text = "label14";
-            // 
             // checkEmail
             // 
             this.checkEmail.AutoSize = true;
@@ -300,14 +219,6 @@
             this.Controls.Add(this.checkUsername);
             this.Controls.Add(this.checkPassword);
             this.Controls.Add(this.checkEmail);
-            this.Controls.Add(this.testDate);
-            this.Controls.Add(this.testPhone);
-            this.Controls.Add(this.testEmail);
-            this.Controls.Add(this.testPass);
-            this.Controls.Add(this.testUser);
-            this.Controls.Add(this.testLast);
-            this.Controls.Add(this.testFirst);
-            this.Controls.Add(this.checkButton);
             this.Controls.Add(this.dateEdit);
             this.Controls.Add(this.txtPhoneNumberCreate);
             this.Controls.Add(this.label8);
@@ -349,14 +260,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPhoneNumberCreate;
         private System.Windows.Forms.DateTimePicker dateEdit;
-        private System.Windows.Forms.Button checkButton;
-        private System.Windows.Forms.Label testFirst;
-        private System.Windows.Forms.Label testLast;
-        private System.Windows.Forms.Label testUser;
-        private System.Windows.Forms.Label testPass;
-        private System.Windows.Forms.Label testEmail;
-        private System.Windows.Forms.Label testPhone;
-        private System.Windows.Forms.Label testDate;
         private System.Windows.Forms.Label checkEmail;
         private System.Windows.Forms.Label checkPassword;
         private System.Windows.Forms.Label checkUsername;
