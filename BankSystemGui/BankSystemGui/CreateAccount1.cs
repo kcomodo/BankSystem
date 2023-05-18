@@ -38,8 +38,38 @@ namespace BankSystemGui
             txtPassCreate.Text = defaultPassword;
             txtEmailCreate.Text = defaultEmail;
             txtPhoneNumberCreate.Text = defaultPhoneNumber;
-            
-            
+
+            txtFirstNameCreate.ForeColor = System.Drawing.Color.Gray;
+            txtFirstNameCreate.GotFocus += txtFirstName_GotFocus;
+            txtFirstNameCreate.LostFocus += txtFirstName_GotFocus;
+
+            txtLastNameCreate.ForeColor = System.Drawing.Color.Gray;
+            txtLastNameCreate.GotFocus += txtLastName_GotFocus;
+            txtLastNameCreate.LostFocus += txtLastName_LostFocus;
+
+            txtUserCreate.ForeColor = System.Drawing.Color.Gray;
+            txtUserCreate.GotFocus += txtUserName_GotFocus;
+            txtUserCreate.LostFocus += txtUserName_LostFocus;
+
+            txtPassCreate.ForeColor = System.Drawing.Color.Gray;
+            txtPassCreate.GotFocus += txtPassword_GotFocus;
+            txtPassCreate.LostFocus += txtPassword_LostFocus;
+
+            txtEmailCreate.ForeColor = System.Drawing.Color.Gray;
+            txtEmailCreate.GotFocus += txtEmail_GotFocus;
+            txtEmailCreate.LostFocus += txtEmail_LostFocus;
+
+            txtPhoneNumberCreate.ForeColor = System.Drawing.Color.Gray;
+            txtPhoneNumberCreate.GotFocus += txtPhoneNumber_GotFocus;
+            txtPhoneNumberCreate.LostFocus += txtPhoneNumber_LostFocus;
+
+            exitBtn2.BackColor = Color.Transparent;
+            exitBtn2.MouseEnter += button1_MouseEnter;
+            exitBtn2.MouseLeave += button1_MouseLeave;
+
+            exitBtn2.FlatAppearance.BorderSize = 0;
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -139,6 +169,85 @@ namespace BankSystemGui
                 txtLastNameCreate.ForeColor = System.Drawing.Color.Gray;
             }
         }
+        private void txtUserName_GotFocus(object sender, EventArgs e)
+        {
+            if (txtUserCreate.Text == defaultUserName)
+            {
+                txtUserCreate.Text = "";
+
+                txtUserCreate.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtUserName_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUserCreate.Text))
+            {
+                txtUserCreate.Text = defaultUserName;
+                txtUserCreate.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+        private void txtPassword_GotFocus(object sender, EventArgs e)
+        {
+            if (txtPassCreate.Text == defaultPassword)
+            {
+                txtPassCreate.Text = "";
+                txtPassCreate.PasswordChar = '*';
+                txtPassCreate.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtPassword_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassCreate.Text))
+            {
+                txtPassCreate.Text = defaultPassword;
+                txtPassCreate.PasswordChar = '\u0000';
+                txtPassCreate.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+        private void txtEmail_GotFocus(object sender, EventArgs e)
+        {
+            if (txtEmailCreate.Text == defaultEmail)
+            {
+                txtEmailCreate.Text = "";
+                txtEmailCreate.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtEmail_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmailCreate.Text))
+            {
+                txtEmailCreate.Text = defaultEmail;
+                txtEmailCreate.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+        private void txtPhoneNumber_GotFocus(object sender, EventArgs e)
+        {
+            if (txtPhoneNumberCreate.Text == defaultPhoneNumber)
+            {
+                txtPhoneNumberCreate.Text = "";
+                txtPhoneNumberCreate.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtPhoneNumber_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPhoneNumberCreate.Text))
+            {
+                txtPhoneNumberCreate.Text = defaultPassword;
+                txtPhoneNumberCreate.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            exitBtn2.BackColor = Color.Transparent;
+
+            exitBtn2.FlatAppearance.BorderSize = 0;
+        }
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            exitBtn2.BackColor = Color.Transparent; // Set the desired background color when not hovered over
+
+            exitBtn2.FlatAppearance.BorderSize = 0;
+        }
 
         private void txtFirstNameCreate_TextChanged(object sender, EventArgs e)
         {
@@ -149,12 +258,17 @@ namespace BankSystemGui
 
         private void txtPassCreate_TextChanged(object sender, EventArgs e)
         {
-            txtPassCreate.PasswordChar = '*';
+            
         }
 
         private void CreateAccount1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitBtn2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
