@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,7 +89,7 @@
             // 
             // btnProceed
             // 
-            this.btnProceed.Location = new System.Drawing.Point(285, 363);
+            this.btnProceed.Location = new System.Drawing.Point(212, 260);
             this.btnProceed.Name = "btnProceed";
             this.btnProceed.Size = new System.Drawing.Size(198, 42);
             this.btnProceed.TabIndex = 11;
@@ -214,7 +215,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 507);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(613, 433);
             this.Controls.Add(this.checkPhoneNumber);
             this.Controls.Add(this.checkUsername);
             this.Controls.Add(this.checkPassword);

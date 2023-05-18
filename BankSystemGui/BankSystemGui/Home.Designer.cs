@@ -38,10 +38,8 @@
             this.profileButton = new FontAwesome.Sharp.IconButton();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.labelName = new System.Windows.Forms.Label();
             this.middlePanel = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
-            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtPicker
@@ -178,21 +176,11 @@
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.labelName);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(139, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(670, 84);
             this.topPanel.TabIndex = 8;
-            // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(80, 28);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(35, 13);
-            this.labelName.TabIndex = 0;
-            this.labelName.Text = "label1";
             // 
             // middlePanel
             // 
@@ -218,8 +206,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -236,6 +222,5 @@
         private FontAwesome.Sharp.IconButton btnOthers;
         private FontAwesome.Sharp.IconButton profileButton;
         private FontAwesome.Sharp.IconButton btnExit;
-        private System.Windows.Forms.Label labelName;
     }
 }
