@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount2));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCityCreate = new System.Windows.Forms.TextBox();
@@ -43,25 +42,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 56);
+            this.label1.Location = new System.Drawing.Point(45, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "City: ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "State:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 88);
+            this.label3.Location = new System.Drawing.Point(45, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 13);
             this.label3.TabIndex = 2;
@@ -70,7 +60,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 117);
+            this.label4.Location = new System.Drawing.Point(45, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 3;
@@ -78,42 +68,46 @@
             // 
             // txtCityCreate
             // 
-            this.txtCityCreate.Location = new System.Drawing.Point(111, 53);
+            this.txtCityCreate.Location = new System.Drawing.Point(123, 151);
             this.txtCityCreate.Name = "txtCityCreate";
-            this.txtCityCreate.Size = new System.Drawing.Size(100, 20);
+            this.txtCityCreate.Size = new System.Drawing.Size(198, 20);
             this.txtCityCreate.TabIndex = 5;
             // 
             // txtZipCreate
             // 
-            this.txtZipCreate.Location = new System.Drawing.Point(111, 88);
+            this.txtZipCreate.Location = new System.Drawing.Point(123, 177);
             this.txtZipCreate.Name = "txtZipCreate";
-            this.txtZipCreate.Size = new System.Drawing.Size(100, 20);
+            this.txtZipCreate.Size = new System.Drawing.Size(198, 20);
             this.txtZipCreate.TabIndex = 6;
             // 
             // txtAddressCreate
             // 
-            this.txtAddressCreate.Location = new System.Drawing.Point(111, 117);
+            this.txtAddressCreate.Location = new System.Drawing.Point(123, 203);
             this.txtAddressCreate.Name = "txtAddressCreate";
-            this.txtAddressCreate.Size = new System.Drawing.Size(100, 20);
+            this.txtAddressCreate.Size = new System.Drawing.Size(198, 20);
             this.txtAddressCreate.TabIndex = 7;
             // 
             // btnCreateAccount
             // 
-            this.btnCreateAccount.Location = new System.Drawing.Point(214, 235);
+            this.btnCreateAccount.BackColor = System.Drawing.Color.SlateGray;
+            this.btnCreateAccount.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateAccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCreateAccount.Location = new System.Drawing.Point(123, 244);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(163, 57);
+            this.btnCreateAccount.Size = new System.Drawing.Size(198, 42);
             this.btnCreateAccount.TabIndex = 8;
             this.btnCreateAccount.Text = "Create Account";
-            this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // stateCombo
             // 
             this.stateCombo.FormattingEnabled = true;
-            this.stateCombo.Location = new System.Drawing.Point(111, 21);
+            this.stateCombo.Location = new System.Drawing.Point(123, 28);
             this.stateCombo.Name = "stateCombo";
-            this.stateCombo.Size = new System.Drawing.Size(121, 21);
+            this.stateCombo.Size = new System.Drawing.Size(198, 21);
             this.stateCombo.TabIndex = 21;
+            this.stateCombo.Text = "State";
             this.stateCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // CreateAccount2
@@ -129,7 +123,6 @@
             this.Controls.Add(this.txtCityCreate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateAccount2";
@@ -142,7 +135,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCityCreate;

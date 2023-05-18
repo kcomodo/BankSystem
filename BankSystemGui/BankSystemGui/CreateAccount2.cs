@@ -30,6 +30,9 @@ namespace BankSystemGui
         public static int zip;
         public static string address;
 
+        private string defaultCity = "City";
+        private string defaultZip = "Zip";
+        private string defaultAddress = "Address";
         public CreateAccount2()
         {
             InitializeComponent();
@@ -44,6 +47,22 @@ namespace BankSystemGui
                 };
 
             stateCombo.Items.AddRange(states);
+
+            txtCityCreate.Text = defaultCity;
+            txtZipCreate.Text = defaultZip;
+            txtAddressCreate.Text = defaultAddress;
+
+            txtCityCreate.ForeColor = System.Drawing.Color.Gray;
+            txtCityCreate.GotFocus += txtCity_GotFocus;
+            txtCityCreate.LostFocus += txtCity_LostFocus;
+
+            txtZipCreate.ForeColor = System.Drawing.Color.Gray;
+            txtZipCreate.GotFocus += txtZip_GotFocus;
+            txtZipCreate.LostFocus += txtZip_LostFocus;
+
+            txtAddressCreate.ForeColor = System.Drawing.Color.Gray;
+            txtAddressCreate.GotFocus += txtAddress_GotFocus;
+            txtAddressCreate.LostFocus += txtAddress_LostFocus;
         }
           
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -72,8 +91,55 @@ namespace BankSystemGui
             
             
         }
+        private void txtCity_GotFocus(object sender, EventArgs e)
+        {
+            if (txtCityCreate.Text == defaultCity)
+            {
+                txtCityCreate.Text = "";
+                txtCityCreate.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtCity_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCityCreate.Text))
+            {
+                txtCityCreate.Text = defaultCity;
+                txtCityCreate.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+        private void txtZip_GotFocus(object sender, EventArgs e)
+        {
+            if (txtZipCreate.Text == defaultZip)
+            {
+                txtZipCreate.Text = "";
+                txtZipCreate.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtZip_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtZipCreate.Text))
+            {
+                txtZipCreate.Text = defaultZip;
+                txtZipCreate.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+        private void txtAddress_GotFocus(object sender, EventArgs e)
+        {
+            if (txtAddressCreate.Text == defaultAddress)
+            {
+                txtAddressCreate.Text = "";
+                txtAddressCreate.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtAddress_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAddressCreate.Text))
+            {
+                txtAddressCreate.Text = defaultAddress;
+                txtAddressCreate.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
 
-      
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
               
