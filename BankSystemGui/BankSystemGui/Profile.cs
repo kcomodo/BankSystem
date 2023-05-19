@@ -48,10 +48,7 @@ namespace BankSystemGui
 
         }
 
-        private void btnOthers_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void bottomPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -81,6 +78,27 @@ namespace BankSystemGui
             
             Login l = new Login();
             l.Show();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home h = new Home();
+            h.Show();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About a = new About();
+            a.Show();
+        }
+
+        private void btnCredit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Credit c = new Credit();
+            c.Show();
         }
     }
 }
