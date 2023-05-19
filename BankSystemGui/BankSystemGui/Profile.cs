@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,13 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace BankSystemGui
 {
     public partial class Profile : Form
     {
- 
-       
+        
         public Profile()
         {
             InitializeComponent();
@@ -27,13 +26,9 @@ namespace BankSystemGui
 
         private void Home_Load(object sender, EventArgs e)
         {
-
             string name = Login.username;
             string password = Login.password;
-           
-
-
-
+            
         }
 
         private void lblHello_Click(object sender, EventArgs e)
@@ -46,12 +41,7 @@ namespace BankSystemGui
 
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login l = new Login();
-            l.Show();
-        }
+        
 
         private void middlePanel_Paint(object sender, PaintEventArgs e)
         {
@@ -73,14 +63,24 @@ namespace BankSystemGui
 
         }
 
-        private void topPanel_Paint(object sender, PaintEventArgs e)
+        private void profileButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Profile profile = new Profile();
+            profile.Show();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+            Login l = new Login();
+            l.Show();
         }
     }
 }

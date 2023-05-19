@@ -138,6 +138,7 @@
             // 
             this.exitBtn.BackColor = System.Drawing.Color.Transparent;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.ForeColor = System.Drawing.Color.Transparent;
             this.exitBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
             this.exitBtn.IconColor = System.Drawing.Color.White;
             this.exitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -163,6 +164,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
+            this.ForeColor = System.Drawing.Color.SlateGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Form1";
