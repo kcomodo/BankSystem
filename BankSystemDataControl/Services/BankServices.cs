@@ -49,6 +49,11 @@ namespace BankSystemDataControl.Services
             return newList;
 
         }
+        public InfoModel InsertBankInfo(InfoModel info)
+        {
+            return _repo.InsertBankInfo(info);
+            
+        }
         public void DeleteUserInfo(string username)
         {
             _repo.DeleteUserInfo(username);

@@ -132,24 +132,25 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return newList;
         }
-        public void InsertBankInfo(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d, string p)
+        public InfoModel InsertBankInfo(InfoModel info)
         {
-            var statement = "Insert into bank_client (clientFirstName, clientLastName, clientUserName, clientEmail, clientState, clientCity, clientZipCode, clientAddress, clientPhoneNumber, " +
-                "clientBirth, clientPassword) values (@newFirst, @newLast, @newUser, @newEmail, @newState, @newCity, @newZip, @newAddress, @newPhone, @newBirth, @newPassword";
+            var statement = "Insert into bank_client(clientFirstName, clientLastName, clientUserName, clientEmail, clientState, clientCity, clientZipCode, clientAddress, clientPhoneNumber, " +
+                "clientBirth, clientPassword) VALUES (@newFirst, @newLast, @newUser, @newEmail, @newState, @newCity, @newZip, @newAddress, @newPhone, @newBirth, @newPassword)";
             var command = new MySqlCommand(statement, _connection);
-            command.Parameters.AddWithValue("@newFirst", f);
-            command.Parameters.AddWithValue("@newLast", l);
-            command.Parameters.AddWithValue("@newUser", u);
-            command.Parameters.AddWithValue("@newEmail", e);
-            command.Parameters.AddWithValue("@newState", s);
-            command.Parameters.AddWithValue("@newCity", c);
-            command.Parameters.AddWithValue("@newZip", z);
-            command.Parameters.AddWithValue("@newAddress", a);
-            command.Parameters.AddWithValue("@newPhone", phone);
-            command.Parameters.AddWithValue("@newBirth", d);
-            command.Parameters.AddWithValue("@newPassword", p);
+            command.Parameters.AddWithValue("@newFirst", info.FirstName);
+            command.Parameters.AddWithValue("@newLast", info.LastName);
+            command.Parameters.AddWithValue("@newUser", info.UserName);
+            command.Parameters.AddWithValue("@newEmail", info.Email);
+            command.Parameters.AddWithValue("@newState", info.State);
+            command.Parameters.AddWithValue("@newCity", info.City);
+            command.Parameters.AddWithValue("@newZip", info.ZipCode);
+            command.Parameters.AddWithValue("@newAddress", info.Address);
+            command.Parameters.AddWithValue("@newPhone", info.PhoneNumber);
+            command.Parameters.AddWithValue("@newBirth", info.DateOfBirth);
+            command.Parameters.AddWithValue("@newPassword", info.Password);
 
-            int result = command.ExecuteNonQuery();
+            command.ExecuteNonQuery();
+            return info;
 
 
         }

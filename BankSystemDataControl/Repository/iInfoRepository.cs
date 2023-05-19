@@ -10,6 +10,7 @@ namespace BankSystemDataControl.Repository
         public IEnumerable<InfoModel> ReturnLogin();
         public bool ValidateLogin(string username, string password);
         public IEnumerable<InfoModel> userInformation(string username);
+        public InfoModel InsertBankInfo(InfoModel info);
         public void DeleteUserInfo(string username);
     }
 }
