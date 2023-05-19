@@ -132,6 +132,27 @@ namespace BankSystemDataControl.Repository
             results.Close();
             return newList;
         }
+        public void InsertBankInfo(string f, string l, string u, string e, string s, string c, int z, string a, string phone, DateTime d, string p)
+        {
+            var statement = "Insert into bank_client (clientFirstName, clientLastName, clientUserName, clientEmail, clientState, clientCity, clientZipCode, clientAddress, clientPhoneNumber, " +
+                "clientBirth, clientPassword) values (@newFirst, @newLast, @newUser, @newEmail, @newState, @newCity, @newZip, @newAddress, @newPhone, @newBirth, @newPassword";
+            var command = new MySqlCommand(statement, _connection);
+            command.Parameters.AddWithValue("@newFirst", f);
+            command.Parameters.AddWithValue("@newLast", l);
+            command.Parameters.AddWithValue("@newUser", u);
+            command.Parameters.AddWithValue("@newEmail", e);
+            command.Parameters.AddWithValue("@newState", s);
+            command.Parameters.AddWithValue("@newCity", c);
+            command.Parameters.AddWithValue("@newZip", z);
+            command.Parameters.AddWithValue("@newAddress", a);
+            command.Parameters.AddWithValue("@newPhone", phone);
+            command.Parameters.AddWithValue("@newBirth", d);
+            command.Parameters.AddWithValue("@newPassword", p);
+
+            int result = command.ExecuteNonQuery();
+
+
+        }
         public void DeleteUserInfo(string username)
         {
                 var statement = "DELETE FROM bank_client WHERE clientUserName=@Username";
