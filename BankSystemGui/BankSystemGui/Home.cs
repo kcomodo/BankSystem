@@ -65,8 +65,22 @@ namespace BankSystemGui
 
         private void profileButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Profile profile = new Profile();
             profile.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+            Login l = new Login();
+            l.Show();
         }
     }
 }

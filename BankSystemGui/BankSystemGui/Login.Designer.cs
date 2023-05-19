@@ -136,15 +136,14 @@
             // 
             // exitBtn
             // 
-            this.exitBtn.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.exitBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitBtn.BackgroundImage")));
+            this.exitBtn.BackColor = System.Drawing.Color.Transparent;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.exitBtn.IconColor = System.Drawing.Color.Black;
+            this.exitBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
+            this.exitBtn.IconColor = System.Drawing.Color.White;
             this.exitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.exitBtn.Location = new System.Drawing.Point(360, 0);
+            this.exitBtn.Location = new System.Drawing.Point(353, 0);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(43, 36);
+            this.exitBtn.Size = new System.Drawing.Size(50, 44);
             this.exitBtn.TabIndex = 10;
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.iconButton2_Click);
@@ -155,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(403, 476);
+            this.ClientSize = new System.Drawing.Size(403, 435);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
