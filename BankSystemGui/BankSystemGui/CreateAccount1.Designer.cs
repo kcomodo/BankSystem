@@ -117,6 +117,7 @@
             // 
             // dateEdit
             // 
+            this.dateEdit.Checked = false;
             this.dateEdit.Location = new System.Drawing.Point(125, 225);
             this.dateEdit.Name = "dateEdit";
             this.dateEdit.Size = new System.Drawing.Size(196, 20);
