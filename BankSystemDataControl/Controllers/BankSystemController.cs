@@ -27,10 +27,10 @@ public class BankSystemController : ControllerBase
             {
                 return Ok(list);
             }
-            else{
+            else {
                 return BadRequest();
             }
-        }catch(Exception e)
+        } catch (Exception e)
         {
             return StatusCode(500, "Internal Server Error");
         }
@@ -49,7 +49,7 @@ public class BankSystemController : ControllerBase
             {
                 return BadRequest();
             }
-        }catch(Exception e)
+        } catch (Exception e)
         {
             return StatusCode(500, "Internal Server Error");
         }
@@ -60,7 +60,7 @@ public class BankSystemController : ControllerBase
         try
         {
             IEnumerable<InfoModel> list = _bankServices.userInformation(username);
-            if(list != null)
+            if (list != null)
             {
                 return Ok(list);
             }
@@ -69,11 +69,19 @@ public class BankSystemController : ControllerBase
                 return BadRequest();
             }
 
-        }catch(Exception e)
+        } catch (Exception e)
         {
             return StatusCode(500, "Internal Server Error");
         }
     }
+    [HttpPost]
+    public IActionResult InsertBankInfo(InfoModel info) {
+        InfoModel returnInfo = _bankServices.InsertBankInfo(info);
+        return StatusCode(500);
+        
+    }
+
+        
     [HttpDelete("{username}")]
     public IActionResult DeleteUserInfo(string username) {
         _bankServices.DeleteUserInfo(username);
