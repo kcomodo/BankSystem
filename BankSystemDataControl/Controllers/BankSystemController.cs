@@ -80,7 +80,12 @@ public class BankSystemController : ControllerBase
         return StatusCode(500);
         
     }
-
+    [HttpPut]
+    public IActionResult UpdateBankInfo(string name, InfoModel info)
+    {
+        _bankServices.UpdateUserInfo(name, info);
+        return NoContent();
+    }
         
     [HttpDelete("{username}")]
     public IActionResult DeleteUserInfo(string username) {

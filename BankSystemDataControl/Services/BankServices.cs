@@ -54,6 +54,10 @@ namespace BankSystemDataControl.Services
             return _repo.InsertBankInfo(info);
             
         }
+        public void UpdateUserInfo(string username, InfoModel info)
+        {
+            _repo.UpdateUserInfo(username, info);
+        }
         public void DeleteUserInfo(string username)
         {
             _repo.DeleteUserInfo(username);
