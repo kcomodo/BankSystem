@@ -156,7 +156,7 @@ namespace BankSystemDataControl.Repository
         }
         public void UpdateUserInfo(string username, InfoModel info)
         {
-            var statement = "Update bank_set set clientFirstName=@newFirst, clientLastName=@newLast, clientUserName=@newUser, clientEmail=@newEmail, clientState=@newState, clientCity=@newCity, clientZipCode=@newZip, " +
+            var statement = "Update bank_client set clientFirstName=@newFirst, clientLastName=@newLast, clientUserName=@newUser, clientEmail=@newEmail, clientState=@newState, clientCity=@newCity, clientZipCode=@newZip, " +
                 "clientAddress=@newAddress, clientPhoneNumber=@newPhone, clientBirth=@newBirth, clientPassword=@newPassword Where clientUserName = @currentUserName";
             var command = new MySqlCommand(statement, _connection);
             command.Parameters.AddWithValue("@newFirst", info.FirstName);
