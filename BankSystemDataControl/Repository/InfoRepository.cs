@@ -154,6 +154,26 @@ namespace BankSystemDataControl.Repository
 
 
         }
+        public void UpdateUserInfo(string username, InfoModel info)
+        {
+            var statement = "Update bank_set set clientFirstName=@newFirst, clientLastName=@newLast, clientUserName=@newUser, clientEmail=@newEmail, clientState=@newState, clientCity=@newCity, clientZipCode=@newZip, " +
+                "clientAddress=@newAddress, clientPhoneNumber=@newPhone, clientBirth=@newBirth, clientPassword=@newPassword Where clientUserName = @currentUserName";
+            var command = new MySqlCommand(statement, _connection);
+            command.Parameters.AddWithValue("@newFirst", info.FirstName);
+            command.Parameters.AddWithValue("@newLast", info.LastName);
+            command.Parameters.AddWithValue("@newUser", info.UserName);
+            command.Parameters.AddWithValue("@newEmail", info.Email);
+            command.Parameters.AddWithValue("@newState", info.State);
+            command.Parameters.AddWithValue("@newCity", info.City);
+            command.Parameters.AddWithValue("@newZip", info.ZipCode);
+            command.Parameters.AddWithValue("@newAddress", info.Address);
+            command.Parameters.AddWithValue("@newPhone", info.PhoneNumber);
+            command.Parameters.AddWithValue("@newBirth", info.DateOfBirth);
+            command.Parameters.AddWithValue("@newPassword", info.Password);
+            command.Parameters.AddWithValue("@currentUserName", username);
+
+            int result = command.ExecuteNonQuery();
+        }
         public void DeleteUserInfo(string username)
         {
                 var statement = "DELETE FROM bank_client WHERE clientUserName=@Username";
