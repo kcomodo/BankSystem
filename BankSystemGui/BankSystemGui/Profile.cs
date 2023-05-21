@@ -1,4 +1,6 @@
 ﻿
+using BankSystemGui.Services;
+using BankSystemGui.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,25 @@ namespace BankSystemGui
         public Profile()
         {
             InitializeComponent();
+            BankServices bank = new BankServices();
+            string name = Login.username;
+
+            List<InfoModel> list = bank.userInformation(name);
+            foreach(InfoModel model in list)
+            {
+                lblName.Text = "Name: "+ model.FirstName + " " + model.LastName;
+                lblUserName.Text = "Username: "+model.UserName;
+                lblPassword.Text = "Password: "+model.Password;
+                lblEmail.Text = "Email: "+model.Email;
+                lblState.Text = "State: "+model.State;
+                lblCity.Text = "City: "+model.City;
+                lblZip.Text = "Zip: " + model.ZipCode;
+                lblAddress.Text = "Address: "+model.Address;
+                lblPhone.Text = "Phone Number: " + model.PhoneNumber;
+                lblBirth.Text = "Date of Birth: " + model.DateOfBirth;
+            }
+            
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -26,8 +47,7 @@ namespace BankSystemGui
 
         private void Home_Load(object sender, EventArgs e)
         {
-            string name = Login.username;
-            string password = Login.password;
+
             
         }
 

@@ -76,14 +76,28 @@ namespace BankSystemGui
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            /*
+            
             if(e.KeyChar == (char)Keys.Enter)
             {
-                this.Hide();
-                Home h = new Home();
-                h.Show();
+                username = txtUsername.Text;
+                password = txtPassword.Text;
+                bool validation = ValidateLogin(username, password);
+
+
+                if (validation)
+                {
+                    this.Hide();
+                    Home h = new Home();
+                    h.Show();
+                }
+                else
+                {
+                    displayIncorrect.Text = "Incorrect Login";
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                }
             }
-            */
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
