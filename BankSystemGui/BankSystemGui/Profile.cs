@@ -33,7 +33,8 @@ namespace BankSystemGui
                 lblZip.Text = "Zip: " + model.ZipCode;
                 lblAddress.Text = "Address: "+model.Address;
                 lblPhone.Text = "Phone Number: " + model.PhoneNumber;
-                lblBirth.Text = "Date of Birth: " + model.DateOfBirth;
+                DateTime dateText = model.DateOfBirth;
+                lblBirth.Text = "Date of Birth: " + dateText.ToString("M/d/yyyy");
             }
             
 
@@ -122,6 +123,11 @@ namespace BankSystemGui
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBirth_Click(object sender, EventArgs e)
         {
 
         }
