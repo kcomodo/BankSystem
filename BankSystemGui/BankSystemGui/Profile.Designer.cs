@@ -49,7 +49,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
@@ -245,7 +244,6 @@
             this.middlePanel.Controls.Add(this.lblEmail);
             this.middlePanel.Controls.Add(this.lblPassword);
             this.middlePanel.Controls.Add(this.lblUserName);
-            this.middlePanel.Controls.Add(this.btnEdit);
             this.middlePanel.Controls.Add(this.lblName);
             this.middlePanel.Controls.Add(this.label3);
             this.middlePanel.ForeColor = System.Drawing.Color.SlateGray;
@@ -266,6 +264,7 @@
             this.lblBirth.Size = new System.Drawing.Size(47, 18);
             this.lblBirth.TabIndex = 14;
             this.lblBirth.Text = "Birth:";
+            this.lblBirth.Click += new System.EventHandler(this.lblBirth_Click);
             // 
             // lblPhone
             // 
@@ -363,19 +362,6 @@
             this.lblUserName.TabIndex = 6;
             this.lblUserName.Text = "Username:";
             // 
-            // btnEdit
-            // 
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(178, 338);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(149, 38);
-            this.btnEdit.TabIndex = 5;
-            this.btnEdit.Text = "Edit Profile";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
@@ -436,7 +422,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton btnExit;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblPassword;
