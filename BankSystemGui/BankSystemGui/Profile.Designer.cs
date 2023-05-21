@@ -374,6 +374,7 @@
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Edit Profile";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblName
             // 

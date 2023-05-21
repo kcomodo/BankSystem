@@ -100,5 +100,10 @@ namespace BankSystemGui
             Credit c = new Credit();
             c.Show();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

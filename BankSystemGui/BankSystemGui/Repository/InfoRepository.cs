@@ -94,9 +94,40 @@ public class InfoRepository
             command.Parameters.AddWithValue("@newPassword", p);
             var results = command.ExecuteReader();
         }
-        
+        public IEnumerable<InfoModel> userInformation(string username)
+        {
+            var statement = "Select * from bank_client where clientUserName=@newUserName";
+            var command = new MySqlCommand(statement, _connection);
+            command.Parameters.AddWithValue("@newUserName", username);
+            var results = command.ExecuteReader();
+            List<InfoModel> newList = new List<InfoModel>();
+            while (results.Read())
+            {
+                InfoModel i = new InfoModel
+                {
+                    ID = (int)results[0],
+                    FirstName = (string)results[1],
+                    LastName = (string)results[2],
+                    UserName = (string)results[3],
+                    Email = (string)results[4],
+                    State = (string)results[5],
+                    City = (string)results[6],
+                    ZipCode = (int)results[7],
+                    Address = (string)results[8],
+                    PhoneNumber = (string)results[9],
+                    DateOfBirth = DateTime.ParseExact(results.GetString(10), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture),
+                    Password = (string)results[11]
+                };
+                newList.Add(i);
+
+            }
+            results.Close();
+            return newList;
+        }
+
 
     }
+
       
         
     }

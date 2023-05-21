@@ -47,7 +47,13 @@ namespace BankSystemGui.Services{
         {
             _repo.registerAccount(f, l, u, e, s, c, z, a, phone, d,p);
         }
-        
+        public List<InfoModel> userInformation(string username)
+        {
+            List<InfoModel> newList = _repo.userInformation(username).ToList<InfoModel>();
+            return newList;
+        }
+
+
 
 
     }
