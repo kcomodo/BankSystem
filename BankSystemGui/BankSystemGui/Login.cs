@@ -73,6 +73,24 @@ namespace BankSystemGui
         {
 
         }
+        private void txtPassword_GotFocus(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == defaultPassword)
+            {
+                txtPassword.Text = "";
+                txtPassword.PasswordChar = '*';
+                txtPassword.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        private void txtPassword_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                txtPassword.Text = defaultPassword;
+                txtPassword.PasswordChar = '\u0000';
+                txtPassword.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -131,22 +149,7 @@ namespace BankSystemGui
                 txtUsername.ForeColor = System.Drawing.Color.Gray;
             }
         }
-        private void txtPassword_GotFocus(object sender, EventArgs e)
-        {
-            if (txtPassword.Text == defaultPassword)
-            {
-                txtPassword.Text = "";
-                txtPassword.ForeColor = System.Drawing.Color.Black;
-            }
-        }
-        private void txtPassword_LostFocus(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                txtPassword.Text = defaultPassword;
-                txtPassword.ForeColor = System.Drawing.Color.Gray;
-            }
-        }
+   
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             exitBtn.BackColor = Color.Transparent;
