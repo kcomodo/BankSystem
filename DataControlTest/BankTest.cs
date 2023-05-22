@@ -1,6 +1,8 @@
 namespace DataControlTest;
 using BankSystemDataControl.Repository;
 using BankSystemDataControl.Models;
+using Moq;
+
 public class UnitTest1
 {
     public InfoRepository _infoRepository;
@@ -58,5 +60,20 @@ public class UnitTest1
     List<InfoModel> newList = _infoRepository.ReturnLogin().ToList<InfoModel>();
     Assert.Empty(newList);
    }
+    [Fact]
+    public void testUserInformation_InformationMatches(string username)
+    {
+        _infoRepository = new InfoRepository();
+        var mockRepository = new Mock<InfoRepository>();
+        mockRepository.Setup(m => m.InfoModels).Returns(new List<InfoModel>
+        {
+            new InfoModel()
+            {
+
+            }
+        });
+
+
+    }
     
 }
