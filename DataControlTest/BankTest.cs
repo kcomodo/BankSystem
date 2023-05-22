@@ -61,7 +61,7 @@ public class UnitTest1
     Assert.Empty(newList);
    }
     [Fact]
-    public void testUserInformation_InformationMatches(string username)
+    public void testUserInformation_InformationMatches()
     {
         _infoRepository = new InfoRepository();
         var mockRepository = new Mock<InfoRepository>();
@@ -69,9 +69,21 @@ public class UnitTest1
         {
             new InfoModel()
             {
-
+                FirstName = "Quang",
+                LastName = "Ho",
+                UserName = "QuangHo",
+                Password = "Rzkkpur2",
+                Email = "QuangHo@gmail.com",
+                PhoneNumber = "8438438433",
+                State = "South Carolina",
+                City = "Myrtle Beach",
+                ZipCode = 29579,
+                Address = "Somewhereln",
+                DateOfBirth = new DateTime(2011, 04, 05)
             }
         });
+        
+       
 
 
     }
