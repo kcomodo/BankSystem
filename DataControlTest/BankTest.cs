@@ -5,10 +5,11 @@ using Moq;
 using BankSystemDataControl.Services;
 using Xunit.Abstractions;
 using Xunit;
+
 public class UnitTest1
 {
     public InfoRepository _infoRepository;
-  
+ 
 
 
     [Fact]
@@ -76,35 +77,56 @@ public class UnitTest1
     public void testUserInformation_InformationMatches()
     {
         _infoRepository = new InfoRepository();
-        var mockRepository = new Mock<iInfoRepository>();
-       
-        mockRepository.Setup(m => m.InfoModels).Returns(new List<InfoModel>()
+        string username = "QuangHo";
+        List<InfoModel> newList = _infoRepository.userInformation(username).ToList<InfoModel>();
+        var mockRepository = GetInfoModel();
+        foreach(InfoModel model in newList)
         {
+            foreach(InfoModel item in mockRepository)
+            {
+                Assert.Equal(item.FirstName, model.FirstName);
+                Assert.Equal(item.LastName, model.LastName);
+                Assert.Equal(item.UserName, model.UserName);
+                Assert.Equal(item.Password, model.Password);
+                Assert.Equal(item.Email, model.Email);
+                Assert.Equal(item.PhoneNumber, model.PhoneNumber);
+                Assert.Equal(item.State, model.State);
+                Assert.Equal(item.City, model.City);
+                Assert.Equal(item.ZipCode, model.ZipCode);
+                Assert.Equal(item.Address, model.Address);
+                Assert.Equal(item.DateOfBirth, model.DateOfBirth);
+            }
+            
+        }
+
+
+
+
+
+
+    }
+    private List<InfoModel> GetInfoModel()
+    {
+        return new List<InfoModel>() {
             new InfoModel()
             {
-                ID = 1,
-                FirstName = "Quang",
-                LastName = "Ho",
-                UserName = "QuangHo",
-                Password = "Rzkkpur2",
-                Email = "QuangHo@gmail.com",
-                PhoneNumber = "8438438433",
-                State = "South Carolina",
-                City = "Myrtle Beach",
-                ZipCode = 29579,
-                Address = "Somewhereln",
-                DateOfBirth = new DateTime(2011, 04, 05)
+            ID = 1,
+            FirstName = "Quang",
+            LastName = "Ho",
+            UserName = "QuangHo",
+            Password = "Rzkkpur2",
+            Email = "QuangHo@gmail.com",
+            PhoneNumber = "8438438433",
+            State = "South Carolina",
+            City = "Myrtle Beach",
+            ZipCode = 29579,
+            Address = "Somewhereln",
+            DateOfBirth = new DateTime(0001, 01, 01)
             }
-        });
-        var newBankService = new BankServices(mockRepository.Object);
-        string username = "QuangHo";
-        var results = newBankService.userInformation(username);
-        var itemInList = Assert.Single(results);
-       
-
-
-
-
+        };
+   
+          
+     
     }
     
     
