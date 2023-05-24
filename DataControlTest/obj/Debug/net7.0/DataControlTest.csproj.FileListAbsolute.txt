@@ -132,3 +132,5 @@ D:\MyProjects\banksystem\DataControlTest\obj\Debug\net7.0\refint\DataControlTest
 D:\MyProjects\banksystem\DataControlTest\obj\Debug\net7.0\DataControlTest.pdb
 D:\MyProjects\banksystem\DataControlTest\obj\Debug\net7.0\DataControlTest.genruntimeconfig.cache
 D:\MyProjects\banksystem\DataControlTest\obj\Debug\net7.0\ref\DataControlTest.dll
+D:\MyProjects\BankSystem\DataControlTest\bin\Debug\net7.0\Castle.Core.dll
+D:\MyProjects\BankSystem\DataControlTest\bin\Debug\net7.0\Moq.dll
