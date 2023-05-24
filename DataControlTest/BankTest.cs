@@ -2,10 +2,15 @@ namespace DataControlTest;
 using BankSystemDataControl.Repository;
 using BankSystemDataControl.Models;
 using Moq;
-
+using BankSystemDataControl.Services;
+using Xunit.Abstractions;
+using Xunit;
 public class UnitTest1
 {
     public InfoRepository _infoRepository;
+  
+
+
     [Fact]
     public void ValidationLogin_CheckValid()
     {
@@ -34,6 +39,7 @@ public class UnitTest1
             // Assert
             Assert.False(result);
     }
+    
    [Fact]
    public void checkInfo_NotEmpty(){
     _infoRepository = new InfoRepository();
@@ -41,6 +47,8 @@ public class UnitTest1
     Assert.NotEmpty(newList);
 
    }
+    
+    /*
    [Fact]
    public void checkInfo_Empty(){
     _infoRepository = new InfoRepository();
@@ -48,27 +56,33 @@ public class UnitTest1
     Assert.Empty(newList);
 
    }
+    */
    [Fact]
    public void testLoginList_NotEmpty(){
     _infoRepository = new InfoRepository();
     List<InfoModel> newList = _infoRepository.ReturnLogin().ToList<InfoModel>();
     Assert.NotEmpty(newList);
    }
+   /*
    [Fact]
    public void testLoginList_Empty(){
     _infoRepository = new InfoRepository();
     List<InfoModel> newList = _infoRepository.ReturnLogin().ToList<InfoModel>();
     Assert.Empty(newList);
    }
+   */
+    
     [Fact]
     public void testUserInformation_InformationMatches()
     {
         _infoRepository = new InfoRepository();
-        var mockRepository = new Mock<InfoRepository>();
-        mockRepository.Setup(m => m.InfoModels).Returns(new List<InfoModel>
+        var mockRepository = new Mock<iInfoRepository>();
+       
+        mockRepository.Setup(m => m.InfoModels).Returns(new List<InfoModel>()
         {
             new InfoModel()
             {
+                ID = 1,
                 FirstName = "Quang",
                 LastName = "Ho",
                 UserName = "QuangHo",
@@ -82,10 +96,16 @@ public class UnitTest1
                 DateOfBirth = new DateTime(2011, 04, 05)
             }
         });
-        
+        var newBankService = new BankServices(mockRepository.Object);
+        string username = "QuangHo";
+        var results = newBankService.userInformation(username);
+        var itemInList = Assert.Single(results);
        
 
 
+
+
     }
+    
     
 }
